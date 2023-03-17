@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/OOPD-Beroepsproduct/src/main/java/nl/desertgame/desert_game/DesertGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OOPD-Beroepsproduct/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/OOPD-Beroepsproduct/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OOPD-Beroepsproduct/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OOPD-Beroepsproduct/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OOPD-Beroepsproduct/src/main/java/com/github/hanyaeger/tutorial/Empty.java" beforeDir="false" />
@@ -320,7 +321,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/OOPD-Beroepsproduct" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -340,28 +341,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/Ruben/Downloads/OOPD_game_1/OOPD_Game-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ruben/Downloads/OOPD_game_1/OOPD_Game-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\src\main\resources" />
@@ -379,7 +380,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679056126140</updated>
       <workItem from="1679056127391" duration="210000" />
-      <workItem from="1679056348640" duration="3443000" />
+      <workItem from="1679056348640" duration="3749000" />
     </task>
     <servers />
   </component>
