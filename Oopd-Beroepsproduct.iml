@@ -9,5 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="github.han.yaeger" level="project" />
+    <orderEntry type="library" name="github.han.yaeger1" level="project" />
   </component>
 </module>
