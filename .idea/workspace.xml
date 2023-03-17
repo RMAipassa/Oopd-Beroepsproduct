@@ -4,309 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/OOPD-Beroepsproduct/src/main/java/nl/desertgame/desert_game/DesertGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOPD-Beroepsproduct/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/OOPD-Beroepsproduct/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOPD-Beroepsproduct/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/OOPD-Beroepsproduct/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOPD-Beroepsproduct/src/main/java/com/github/hanyaeger/tutorial/Empty.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOPD-Beroepsproduct/src/main/java/com/github/hanyaeger/tutorial/start-here.md" beforeDir="false" afterPath="$PROJECT_DIR$/OOPD-Beroepsproduct/src/main/java/nl/desertgame/desert_game/start-here.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OOPD-Beroepsproduct/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/OOPD-Beroepsproduct/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/.github/workflows/documentation.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/.github/workflows/maven.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/.github/workflows/release.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/.markdownlint.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/book.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/SUMMARY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/commandline-arguments.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/creating-a-game.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/creating-entities.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/debugging.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/entities.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/entity-interactions.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/faq.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/images/tile-scene.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/images/tile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/images/update-delegation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/images/witch-spritesheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/introduction.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/scenes.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/sounds.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/timing-things.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/docs/user-input.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/release.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/AnchorPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/Coordinate2D.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/EntitySpawnerContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/Size.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/Timer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/TimerContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/UpdateExposer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/YaegerGame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/Animation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/AnimationCallback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/Collided.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/Collider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/CompositeEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/ContinuousRotatable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/Direction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/DynamicCompositeEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/EntitySpawner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/FiniteAnimation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/FiniteAnimationWithCallBack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/LinkedAnimation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/LinkedAnimationWithCallBack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/LoopingAnimation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/Newtonian.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/Rotatable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/SceneBorderCrossingWatcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/SceneBorderTouchingWatcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/YaegerEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/CircleEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/CustomFont.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/DynamicCircleEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/DynamicEllipseEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/DynamicRectangleEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/DynamicSpriteEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/DynamicTextEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/EllipseEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/RectangleEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/SpriteEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/TextEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/impl/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/entities/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/media/SoundClip.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/media/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/scenes/DynamicScene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/scenes/SceneBorder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/scenes/ScrollableDynamicScene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/scenes/StaticScene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/scenes/TileMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/scenes/TileMapContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/scenes/YaegerScene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/scenes/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/KeyListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/MouseButtonPressedListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/MouseButtonReleasedListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/MouseDragEnterListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/MouseDragExitedListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/MouseDraggedListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/MouseDropListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/MouseEnterListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/MouseExitListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/MouseMovedListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/MouseMovedWhileDraggingListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/api/userinput/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/Activatable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/Clearable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/DependencyInjector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/Destroyable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/Effectable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/Initializable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/ResourceConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/RootPaneProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/SceneCollection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/TimerListProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/Updatable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/UpdateDelegator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/Updater.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/ViewOrders.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/YaegerAnimationTimer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/YaegerCommandLineParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/YaegerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/YaegerGameObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/YaegerStage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/annotations/AnnotationProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/annotations/OnActivation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/annotations/OnPostActivation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/annotations/UpdatableProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/Anchorable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/Bounded.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/BoundingBoxVisualizer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/CenteredShapeEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/CollisionDelegate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/Debugger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/DragRepositoryAccessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/EntityCollection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/EntityCollectionStatistics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/EntityConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/EntityProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/EntitySupplier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/EventInitiator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/GameNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/NamedAnimationListProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/Placeable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/Removable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/SceneChild.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/ShapeEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/SpriteAnimationDelegate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/StatisticsObserver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/events/EventTypes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/events/RemoveEntityEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/motion/BufferedMovable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/motion/DirectionProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/motion/EntityMotionInitBuffer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/motion/InitializationBuffer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/motion/LocationUpdater.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/motion/MotionApplier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/motion/MotionModifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/motion/Movable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/motion/NewtonianModifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/entities/motion/SpeedProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/exceptions/EntityNotAvailableException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/exceptions/FailedToInstantiateEntityException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/exceptions/InvalidConstructorException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/exceptions/ResourceNotAvailableException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/exceptions/YaegerEngineException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/exceptions/YaegerLifecycleException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/exceptions/YaegerSceneNotAvailableException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/BackgroundFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/EntityCollectionFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/EntitySupplierFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/MediaFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/PaneFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/SceneCollectionFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/SceneFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/TileFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/animationtimer/AnimationTimerFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/animationtimer/AnimationTimerHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/animationtimer/TimeableAnimationTimer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/animationtimer/TimeableAnimationTimerHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/debug/DebugGridPaneFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/debug/DebugLabelFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/image/ImageFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/image/ImageViewFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/factories/image/SpriteAnimationDelegateFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/guice/YaegerModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/media/BackgroundAudioMediaPlayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/repositories/AudioRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/repositories/DragNDropRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/repositories/ImageRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/DimensionsProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/EntityCollectionSupplier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/EntitySpawnerListProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/SupplierProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/TileMapListProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/delegates/BackgroundDelegate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/delegates/KeyListenerDelegate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/splash/FadeInTimer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/splash/Logo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/splash/SplashScene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/splash/SplashSceneTimer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/com/github/hanyaeger/core/scenes/splash/SplashScreenFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/javadoc/hanyaeger/com/github/hanyaeger/core/entities/motion/doc-files/invert-motion-vectors.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/javadoc/hanyaeger/com/github/hanyaeger/core/entities/motion/doc-files/maximize-motion-vectors.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/javadoc/hanyaeger/com/github/hanyaeger/core/entities/motion/doc-files/nullify-motion-vectors.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/resources/yaegerimages/logo-yaeger.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/main/resources/yaegerimages/splash-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/EntitySpawnerContainerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/SizeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/TimerContainerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/TimerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/UpdateExposerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/YaegerCommandLineParserTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/CollidedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/CompositeEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/ContinuousRotatableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/Coordinate2DTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/DirectionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/DynamicCompositeEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/EntitySpawnerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/NewtonianTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/RotatableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/SceneBorderCrossingWatcherTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/SceneBorderTouchingWatcherTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/YaegerEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/CircleEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/CustomFontTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/DynamicCircleEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/DynamicEllipseEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/DynamicRectangleEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/DynamicSpriteEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/DynamicTextEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/EllipseEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/RectangleEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/SpriteEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/entities/impl/TextEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/media/SoundClipTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/scenes/DynamicSceneTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/scenes/ScrollableDynamicSceneTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/scenes/SpriteEntityOne.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/scenes/SpriteEntityThree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/scenes/SpriteEntityTwo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/scenes/StaticSceneTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/scenes/TileMapContainerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/scenes/TileMapTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/scenes/YaegerSceneTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseButtonPressedListenerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseButtonReleasedListenerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseDragEnterListenerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseDragExitedListenerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseDraggedListenerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseDraggingEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseDropListenerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseEnterListenerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseExitListenerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseMovedListenerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/api/userinput/MouseMovedWhileDraggingListenerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/ActivatableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/SceneCollectionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/UpdaterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/ViewOrdersTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/YaegerGameObjectTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/YaegerStageTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/annotations/AnnotationProcessorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/BoundedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/BoundingBoxVisualizerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/CenteredShapeEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/CollisionDelegateTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/EntityCollectionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/EntitySupplierTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/RemovableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/ShapeEntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/SpriteFiniteAnimationDelegateTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/events/RemoveEntityEventTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/motion/BufferedMovableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/motion/DirectionProviderTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/motion/EntityMotionInitBufferTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/motion/InitializationBufferTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/motion/MotionApplierTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/motion/MovableTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/entities/motion/SpeedProviderTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/exceptions/ResourceNotAvailableExceptionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/exceptions/YaegerGameExceptionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/exceptions/YaegerLifecycleExceptionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/exceptions/YaegerSceneNotAvailableExceptionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/factories/SpriteEntityCrashingConstructorImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/factories/SpriteEntityInvalidConstructorImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/factories/SpriteEntityValidConstructorImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/factories/TileFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/factories/YaegerEntityConfigurableConstructorImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/factories/YaegerEntityValidConstructorImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/media/BackgroundAudioMediaPlayerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/media/ResourceConsumerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/repositories/AudioRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/repositories/DragNDropRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/repositories/ImageRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/scenes/delegates/BackgroundDelegateTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/scenes/delegates/KeyListenerDelegateTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/java/com/github/hanyaeger/core/scenes/splash/SplashScreenFactoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/resources/audio/testaudio.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/resources/audio/testaudio2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/resources/fonts/pixelfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/resources/waterworld/images/bubble.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/resources/waterworld/images/poison.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/resources/waterworld/images/sprite-with-two-frames.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/resources/waterworld/underwater2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yaeger-2022.2023/src/test/resources/waterworld/underwater3.jpg" beforeDir="false" />
-    </list>
+    <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="testing" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -358,7 +56,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -381,9 +79,21 @@
       <workItem from="1679056127391" duration="210000" />
       <workItem from="1679056348640" duration="3443000" />
     </task>
+    <task id="LOCAL-00001" summary="testing">
+      <created>1679060593486</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679060593486</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing" />
   </component>
 </project>
