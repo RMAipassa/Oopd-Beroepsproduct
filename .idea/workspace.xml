@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="test 2.0">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/github_han_yaeger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/github_han_yaeger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -11,6 +12,9 @@
       <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/DesertGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/DesertGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Oopd-Beroepsproduct.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Oopd-Beroepsproduct.iml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="test 2.0" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +48,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
@@ -67,6 +72,31 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ruben/Downloads/yaeger-tutorial-master/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.20804597&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+>>>>>>> Stashed changes
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\src\main\resources" />
@@ -89,6 +119,10 @@
       <workItem from="1679061508333" duration="1361000" />
       <workItem from="1679063139055" duration="685000" />
       <workItem from="1679064163464" duration="238000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1679404359724" duration="25000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="testing">
       <created>1679060593486</created>
