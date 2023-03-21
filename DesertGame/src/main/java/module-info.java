@@ -3,7 +3,7 @@ module nl.desertgame.desert_game {
 
     exports nl.desertgame.desert_game;
 
-    opens audio;
+//    opens audio;
     opens backgrounds;
 //    opens audio;
     exports nl.desertgame.desert_game.screens;
