@@ -3,6 +3,7 @@ package nl.desertgame.desert_game.screens;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.scenes.DynamicScene;
+import com.github.hanyaeger.api.scenes.TileMapContainer;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -10,9 +11,10 @@ import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.entities.Image;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.entities.Text;
+import nl.desertgame.desert_game.map.FloorTileMap;
 
 
-public class GameScreen extends DynamicScene {
+public class GameScreen extends DynamicScene implements TileMapContainer {
     private DesertGame desertGame;
 
     public GameScreen(DesertGame desertGame) {
@@ -21,7 +23,7 @@ public class GameScreen extends DynamicScene {
 
     @Override
     public void setupScene() {
-        setBackgroundImage("backgrounds/titlescreen.png");
+        setBackgroundColor(Color.BLACK);
     }
 
     @Override
@@ -31,6 +33,11 @@ public class GameScreen extends DynamicScene {
         addEntity(player);
         setupPotions(player);
 //        setupHearts(player);
+    }
+
+    @Override
+    public void setupTileMaps() {
+        addTileMap(new FloorTileMap());
     }
 
     public void setupPotions(Player player) {
