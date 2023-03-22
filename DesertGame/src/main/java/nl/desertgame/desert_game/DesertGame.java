@@ -12,18 +12,20 @@ public class DesertGame extends YaegerGame {
     public static void main(String[] args) {
         launch(args);
     }
+    public int difficulty;
 
     @Override
     public void setupGame() {
         setGameTitle("Desert Game");
-        setSize(new Size(1280, 720));
+        setSize(new Size(1280, 640));
     }
 
     @Override
     public void setupScenes() {
         addScene(0, new TitleScene(this));
-        addScene(1, new GameScreen());
-        addScene(2, new GameOverScreen());
-        addScene(3, new VictoryScreen());
+        addScene(1, new GameScreen(this));
+        addScene(2, new GameOverScreen(this));
+        addScene(3, new VictoryScreen(this));
     }
+
 }
