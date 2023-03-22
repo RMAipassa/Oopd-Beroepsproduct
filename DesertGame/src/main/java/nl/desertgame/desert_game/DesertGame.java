@@ -16,7 +16,7 @@ public class DesertGame extends YaegerGame {
     @Override
     public void setupGame() {
         setGameTitle("Desert Game");
-        setSize(new Size(1280, 720));
+        setSize(new Size(1280, 640));
     }
 
     @Override
