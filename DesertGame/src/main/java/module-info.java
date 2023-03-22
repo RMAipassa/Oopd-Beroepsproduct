@@ -3,6 +3,7 @@ module nl.desertgame.desert_game {
 
     exports nl.desertgame.desert_game;
     exports nl.desertgame.desert_game.map;
+    exports nl.desertgame.desert_game.entities;
     opens backgrounds;
     opens sprites.Floortiles;
     opens sprites.SolidTiles;
@@ -10,4 +11,5 @@ module nl.desertgame.desert_game {
     opens sprites.Treasure;
     exports nl.desertgame.desert_game.screens;
     opens sprites;
+    exports nl.desertgame.desert_game.map.tiles;
 }

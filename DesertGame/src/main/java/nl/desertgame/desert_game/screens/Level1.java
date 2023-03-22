@@ -11,13 +11,14 @@ import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.entities.Image;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.entities.Text;
-import nl.desertgame.desert_game.map.FloorTileMap;
+import nl.desertgame.desert_game.map.FakeChestMap;
+import nl.desertgame.desert_game.map.StartMap;
 
 
-public class GameScreen extends DynamicScene implements TileMapContainer {
+public class Level1 extends DynamicScene implements TileMapContainer {
     private DesertGame desertGame;
 
-    public GameScreen(DesertGame desertGame) {
+    public Level1(DesertGame desertGame) {
         this.desertGame = desertGame;
     }
 
@@ -29,7 +30,7 @@ public class GameScreen extends DynamicScene implements TileMapContainer {
     @Override
     public void setupEntities() {
         Player player;
-        player = new Player(new Coordinate2D(50, 50));
+        player = new Player(new Coordinate2D(50, 320));
         addEntity(player);
         setupPotions(player);
 //        setupHearts(player);
@@ -37,7 +38,7 @@ public class GameScreen extends DynamicScene implements TileMapContainer {
 
     @Override
     public void setupTileMaps() {
-        addTileMap(new FloorTileMap());
+        addTileMap(new StartMap());
     }
 
     public void setupPotions(Player player) {

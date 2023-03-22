@@ -1,4 +1,4 @@
-package nl.desertgame.desert_game.map;
+package nl.desertgame.desert_game.map.tiles;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
