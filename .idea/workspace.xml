@@ -5,14 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="test 2.0">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/github_han_yaeger.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/github_han_yaeger1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/DesertGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/DesertGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/map/StartMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/map/StartMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/Level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/Level1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oopd-Beroepsproduct.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Oopd-Beroepsproduct.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/DesertGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/DesertGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/map/StartMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/map/StartMap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/Level1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/Level1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/aopalliance-1.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checker-qual-3.5.0-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checker-qual-3.5.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/checker-qual-3.5.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/error_prone_annotations-2.3.4-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/error_prone_annotations-2.3.4-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/error_prone_annotations-2.3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/failureaccess-1.0.1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/failureaccess-1.0.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/failureaccess-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/guava-30.1-jre-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/guava-30.1-jre-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/guava-30.1-jre.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/guice-5.1.0-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/guice-5.1.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/guice-5.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/j2objc-annotations-1.3-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/j2objc-annotations-1.3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/j2objc-annotations-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-base-19-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-base-19-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-base-19-win.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-base-19.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-controls-19-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-controls-19-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-controls-19-win.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-controls-19.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-graphics-19-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-graphics-19-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-graphics-19-win.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-graphics-19.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-media-19-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-media-19-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-media-19-win.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-media-19.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javax.inject-1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javax.inject-1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javax.inject-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jsr305-3.0.2-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jsr305-3.0.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jsr305-3.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/yaeger-2022.2023-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/yaeger-2022.2023-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/yaeger-2022.2023.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,29 +99,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/semgr/Desktop/OOPD-BEROEPSPRODUCT/Oopd-Beroepsproduct/DesertGame/src/main/resources/sprites&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.20804597&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/semgr/Desktop/OOPD-BEROEPSPRODUCT/Oopd-Beroepsproduct/DesertGame/src/main/resources/sprites",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.20804597",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\semgr\Desktop\OOPD-BEROEPSPRODUCT\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites" />
@@ -86,7 +138,7 @@
     <configuration name="DesertGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nl.desertgame.desert_game.DesertGame" />
       <module name="Oopd-Beroepsproduct" />
-      <option name="PROGRAM_PARAMETERS" value="--noSplash --showBB" />
+      <option name="PROGRAM_PARAMETERS" value="--noSplash --showBB --showDebug" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.desertgame.desert_game.*" />
@@ -120,7 +172,7 @@
       <workItem from="1679404359724" duration="25000" />
       <workItem from="1679473327961" duration="285000" />
       <workItem from="1679486442545" duration="10704000" />
-      <workItem from="1679579328425" duration="1049000" />
+      <workItem from="1679579328425" duration="4500000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <created>1679060593486</created>

@@ -29,6 +29,7 @@ public class DesertGame extends YaegerGame {
         addScene(5, new Level5(this));
         addScene(6, new GameOverScreen(this));
         addScene(7, new VictoryScreen(this));
+        setActiveScene(1);
     }
 
 }
