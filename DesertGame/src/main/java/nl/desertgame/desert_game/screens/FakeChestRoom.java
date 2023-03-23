@@ -6,19 +6,18 @@ import com.github.hanyaeger.api.scenes.TileMapContainer;
 import javafx.scene.paint.Color;
 import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.entities.Player;
-import nl.desertgame.desert_game.map.RoomMap;
-import nl.desertgame.desert_game.map.StartMap;
+import nl.desertgame.desert_game.map.FakeChestMap;
 
-public class Level2 extends DynamicScene implements TileMapContainer {
+public class FakeChestRoom extends DynamicScene implements TileMapContainer {
 
     private DesertGame desertGame;
 
-    public Level2(DesertGame desertGame) {
+    public FakeChestRoom(DesertGame desertGame) {
         this.desertGame = desertGame;
     }
     @Override
-    public void setupTileMaps(){
-        addTileMap(new RoomMap());
+    public void setupTileMaps() {
+        addTileMap(new FakeChestMap());
     }
 
     @Override
@@ -29,7 +28,7 @@ public class Level2 extends DynamicScene implements TileMapContainer {
     @Override
     public void setupEntities() {
         Player player;
-        player = new Player(desertGame ,new Coordinate2D(50, 320));
+        player = new Player(desertGame ,new Coordinate2D(640, 60));
         addEntity(player);
     }
 }

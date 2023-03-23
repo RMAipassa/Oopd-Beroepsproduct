@@ -3,86 +3,128 @@ package nl.desertgame.desert_game.entities;
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
+import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.effect.ColorInput;
 import javafx.scene.input.KeyCode;
 import nl.desertgame.desert_game.DesertGame;
-import nl.desertgame.desert_game.map.tiles.EntryTile;
-import nl.desertgame.desert_game.map.tiles.ExitTile;
-import nl.desertgame.desert_game.map.tiles.Keydoor;
-import nl.desertgame.desert_game.map.tiles.SolidTile;
+import nl.desertgame.desert_game.map.tiles.*;
 
 import java.util.List;
 import java.util.Set;
 
-public class Player extends DynamicSpriteEntity implements KeyListener, Collided, Collider {
+public class Player extends DynamicSpriteEntity implements KeyListener, Collided, Collider, UpdateExposer {
 
     private DesertGame desertGame;
+    public static int nextScene = 2;
 
-    public static int nextScene;
+    public static int currentscene = 1;
 
-    public static int currentscene;
-
-    public static int previousScene;
-    private final int BossScene = 5;
+    public static int previousScene = 0;
     private static int health;
     private static int potions;
 
-    public static boolean hasKey = false;
+    boolean isColliding = false;
+    static int direction;
 
+    public static boolean hasKey = true;
 
-
-
-    boolean colliding = false;
 
     public Player(DesertGame desertgame,Coordinate2D initialLocation) {
         super("sprites/player.png", initialLocation, new Size(32, 32), 2, 2);
         this.desertGame = desertgame;
         setAnchorPoint(AnchorPoint.CENTER_CENTER);
     }
-
-    public static void SetSceneNumbers() {
-        currentscene = 1;
-        nextScene = 2;
-        previousScene= 0;
-    }
-
-
+    @Override
     public void onPressedKeysChange(Set<KeyCode> pressedKeys) {
         if (pressedKeys.isEmpty()) {
             setSpeed(0);
             return;
         }
-        KeyCode keyPressed = pressedKeys.iterator().next();
-        switch (keyPressed) {
-            case LEFT:
-                setMotion(3, 270d);
-                setCurrentFrameIndex(3);
-                break;
-            case RIGHT:
-                setMotion(3, 90d);
-                setCurrentFrameIndex(4);
-                break;
-            case UP:
-                setMotion(3, 180d);
-                setCurrentFrameIndex(2);
-                break;
-            case DOWN:
-                setMotion(3, 0d);
-                setCurrentFrameIndex(1);
-                break;
-            case A: //was used for testing
-                System.out.println(nextScene);
-                desertGame.setActiveScene(nextScene);
-                setScenes(+1);
-                break;
-            default:
-                setSpeed(0);
-                break;
+        if (!isColliding) {
+            Move(pressedKeys);
         }
+        if(isColliding) {
+            switch (direction) {
+                case 2 -> { //moving up
+                    if (!pressedKeys.contains(KeyCode.UP)) {
+                        Move(pressedKeys);
+                    } else {
+                        setSpeed(0);
+                        System.out.println("No Up");
+                    }
+                }
+                case 1 -> {
+                    if (!pressedKeys.contains(KeyCode.RIGHT)) {
+                        Move(pressedKeys);
+                    } else {
+                        setSpeed(0);
+                    }
+                }
+                case 0 -> {
+                    if (!pressedKeys.contains(KeyCode.DOWN)) {
+                        Move(pressedKeys);
+                    } else {
+                        setSpeed(0);
+                    }
+                }
+                case 3 -> {
+                    if (!pressedKeys.contains(KeyCode.LEFT)) {
+                        Move(pressedKeys);
+                    } else {
+                        setSpeed(0);
+                    }
+                }
+                default -> {
+                }
+            }
+        }
+    }
+
+    void Move(Set<KeyCode> pressedKeys) {
+            KeyCode keyPressed = pressedKeys.iterator().next();
+            switch (keyPressed) {
+                case LEFT -> {
+                    moveplayer(3);
+
+                }
+                case RIGHT -> {
+                    moveplayer(1);
+
+                }
+                case UP -> {
+                    moveplayer(2);
+
+                }
+                case DOWN -> {
+                    moveplayer(0);
+
+                }
+                case A -> { //was used for testing
+                    System.out.println(nextScene);
+                    desertGame.setActiveScene(nextScene);
+                    setScenes(+1);
+                }
+                default -> setSpeed(0);
+            }
+    }
+
+    void moveplayer(int m){
+        setCurrentFrameIndex(m);
+        setMotion(3,m*90);
+        if (!isColliding) {
+            direction = m;
+        }
+    }
+    @Override
+    public void explicitUpdate(long l) {
+        if (isColliding) {
+        }
+        isColliding = false;
     }
 
     public int getPotions() {
@@ -98,7 +140,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
        previousScene += change;
        currentscene += change;
        nextScene += change;
-        System.out.println(currentscene);
+       System.out.println(currentscene);
        System.out.println(previousScene);
        System.out.println(nextScene);
     }
@@ -107,7 +149,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     @Override
     public void onCollision(Collider collidingObjects) {
         if (collidingObjects instanceof SolidTile) {
-            colliding = true;
+            isColliding = true;
             setMotion(0, 0);
         } else if (collidingObjects instanceof ExitTile) {
             desertGame.setActiveScene(nextScene);
@@ -117,15 +159,20 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
             setScenes(-1);
         } else if (collidingObjects instanceof Keydoor) {
             if(Player.hasKey) {
-                desertGame.setActiveScene(BossScene);
+                desertGame.setActiveScene(nextScene);
+            } else {
+            System.out.println("player has no key");
             }
+        } else if (collidingObjects instanceof TopDoor) {
+            desertGame.setActiveScene(5);
+        } else if (collidingObjects instanceof BottomDoor) {
+            desertGame.setActiveScene(2);
+
         }
     }
 
-    @Override
-    public void checkForCollisions(List<Collider> colliders) {
-        Collided.super.checkForCollisions(colliders);
-    }
+
+
 
     public void sethealth(int hearts) {
         health = hearts;

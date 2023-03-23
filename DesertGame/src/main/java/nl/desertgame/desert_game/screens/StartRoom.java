@@ -4,7 +4,6 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
-import com.github.hanyaeger.api.scenes.YaegerScene;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -18,14 +17,14 @@ import nl.desertgame.desert_game.map.StartMap;
 import java.util.ArrayList;
 
 
-public class Level1 extends DynamicScene implements TileMapContainer {
+public class StartRoom extends DynamicScene implements TileMapContainer {
     private DesertGame desertGame;
     private  Text amountPotion;
     private Player player;
     private ArrayList<Heart> Hearts;
     public int amountHearts;
 
-    public Level1(DesertGame desertGame) {
+    public StartRoom(DesertGame desertGame) {
         this.desertGame = desertGame;
     }
 

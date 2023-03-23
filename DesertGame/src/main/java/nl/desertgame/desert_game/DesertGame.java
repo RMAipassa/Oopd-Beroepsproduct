@@ -16,20 +16,18 @@ public class DesertGame extends YaegerGame {
     public void setupGame() {
         setGameTitle("Desert Game");
         setSize(new Size(1280, 640));
-        Player.SetSceneNumbers();
     }
 
     @Override
     public void setupScenes() {
         addScene(0, new TitleScene(this));
-        addScene(1, new Level1(this));
-        addScene(2, new Level2(this));
-        addScene(3, new Level3(this));
-        addScene(4, new Level4(this));
-        addScene(5, new Level5(this));
+        addScene(1, new StartRoom(this));
+        addScene(2, new EnemyChoiceRoom(this));
+        addScene(3, new FakeChestRoom(this));
+        addScene(4, new BossRoom(this));
+        addScene(5, new MiddleBoss(this));
         addScene(6, new GameOverScreen(this));
         addScene(7, new VictoryScreen(this));
-        setActiveScene(1);
     }
 
 }

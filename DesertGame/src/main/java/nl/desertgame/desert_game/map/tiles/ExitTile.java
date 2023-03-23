@@ -11,7 +11,7 @@ public class ExitTile extends SpriteEntity implements Collider {
             "sprites/SolidTiles/TopDoor.png",
             "sprites/SolidTiles/RightDoor.png",
             "sprites/SolidTiles/BottomDoor.png",
-            "sprites/LeftDoor.png",
+            "sprites/SolidTiles/LeftDoor.png",
     };
     public ExitTile(Coordinate2D coordinate2D, Size size, String resource) {
         super(resource, coordinate2D, size);
