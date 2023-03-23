@@ -9,16 +9,19 @@ import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
+import nl.desertgame.desert_game.screens.GameScreen;
 
 import java.util.List;
 import java.util.Set;
 
 public class Player extends DynamicSpriteEntity implements KeyListener {
-    private int health;
+    public int health;
     private int potions;
+    private GameScreen gamescreen;
 
-    public Player(Coordinate2D initialLocation) {
-        super("sprites/player.png", initialLocation, new Size(32, 32), 2, 2);
+    public Player(Coordinate2D initialLocation, GameScreen gamescreen) {
+        super("sprites/player.png", initialLocation,new Size(32, 32), 2, 2);
+        this.gamescreen = gamescreen;
     }
 
 
@@ -32,6 +35,9 @@ public class Player extends DynamicSpriteEntity implements KeyListener {
             case LEFT:
                 setMotion(1, 270d);
                 setCurrentFrameIndex(3);
+                health--;
+                System.out.println(health);
+                gamescreen.updateHearts();
                 break;
             case RIGHT:
                 setMotion(1, 90d);
@@ -53,6 +59,9 @@ public class Player extends DynamicSpriteEntity implements KeyListener {
 
     public int getPotions() {
         return potions;
+    }
+    public int getHealth(){
+        return health;
     }
 
     @Override

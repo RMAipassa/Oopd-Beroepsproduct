@@ -4,62 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbb025f4-04e2-47a5-848a-57e5baffa8f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/buttons/DifficultySwitcherButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Text.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/backgrounds/gameover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/backgrounds/lootroom.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/potion.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/potion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/victory.png" afterDir="false" />
+    <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="test 2.0">
+      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/Empty.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/DesertGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/DesertGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/TitleScene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/GameOverScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/GameOverScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Text.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/TitleScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/TitleScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/VictoryScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/VictoryScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/audio/ocean.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/audio/pop.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/audio/waterworld.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/backgrounds/background1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/backgrounds/background2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/backgrounds/background3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/backgrounds/titlescreen_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/backgrounds/titlescreen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/coral1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/coral2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/coral3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/coral4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/hanny.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/sharky.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/swordfish.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/audio/ocean.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/audio/pop.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/audio/waterworld.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/backgrounds/background1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/backgrounds/background2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/backgrounds/background3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/backgrounds/titlescreen_background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/DesertGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/DesertGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/TitleScene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Image.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/GameOverScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/GameOverScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Text.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Text.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/GameScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/GameScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/TitleScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/TitleScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/VictoryScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/VictoryScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/sprites/coral1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/sprites/coral2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/sprites/coral3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/sprites/coral4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/sprites/hanny.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/sprites/sharky.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/sprites/swordfish.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/sprites/heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/sprites/heart.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,35 +50,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/semgr/OneDrive/OOPD-BEROEPSPRODUCT LOKAAL/Oopd-Beroepsproduct/DesertGame/src/main/resources/sprites&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.20804597&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/semgr/Desktop/OOPD-BEROEPSPRODUCT/Oopd-Beroepsproduct/DesertGame/src/main/resources/sprites",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.20804597",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\semgr\OneDrive\OOPD-BEROEPSPRODUCT LOKAAL\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites" />
-      <recent name="C:\Users\semgr\OneDrive\OOPD-BEROEPSPRODUCT LOKAAL\Oopd-Beroepsproduct\DesertGame\src\main\resources\backgrounds" />
+      <recent name="C:\Users\semgr\Desktop\OOPD-BEROEPSPRODUCT\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\semgr\Desktop\OOPD-BEROEPSPRODUCT\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites" />
       <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\src\main\resources" />
       <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\src\main\resources\backgrounds" />
       <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\DesertGame\src" />
@@ -133,6 +89,7 @@
     <configuration name="DesertGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nl.desertgame.desert_game.DesertGame" />
       <module name="Oopd-Beroepsproduct" />
+      <option name="PROGRAM_PARAMETERS" value="--noSplash" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.desertgame.desert_game.*" />
@@ -152,7 +109,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dbb025f4-04e2-47a5-848a-57e5baffa8f9" name="Changes" comment="" />
+      <changelist id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="" />
       <created>1679056126140</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -164,7 +121,8 @@
       <workItem from="1679063139055" duration="685000" />
       <workItem from="1679064163464" duration="238000" />
       <workItem from="1679404359724" duration="25000" />
-      <workItem from="1679412000799" duration="5187000" />
+      <workItem from="1679473327961" duration="285000" />
+      <workItem from="1679486442545" duration="10704000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <created>1679060593486</created>
