@@ -35,9 +35,6 @@ public class Player extends DynamicSpriteEntity implements KeyListener {
             case LEFT:
                 setMotion(1, 270d);
                 setCurrentFrameIndex(3);
-                health--;
-                System.out.println(health);
-                gamescreen.updateHearts();
                 break;
             case RIGHT:
                 setMotion(1, 90d);

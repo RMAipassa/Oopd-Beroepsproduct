@@ -8,6 +8,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.desertgame.desert_game.DesertGame;
+import nl.desertgame.desert_game.entities.Heart;
 import nl.desertgame.desert_game.entities.Image;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.entities.Text;
@@ -19,7 +20,7 @@ public class GameScreen extends DynamicScene {
     private DesertGame desertGame;
 private  Text amountPotion;
 private Player player;
-    private ArrayList<Image> Hearts;
+    private ArrayList<Heart> Hearts;
     public int amountHearts;
 
     public GameScreen(DesertGame desertGame) {
@@ -52,10 +53,11 @@ private Player player;
     public void updateHearts(){
         int index;
         if(Hearts.size() > player.getHealth()){
-            index = player.getHealth() - 1;
-            System.out.println(index);
-            Hearts.remove(index);
-            System.out.println(Hearts.size()+"Size Arraylist");
+            index = player.getHealth() ;
+            Hearts.get(index).setCurrentFrameIndex(1);
+        } else if (Hearts.size() < player.getHealth()){
+            index = player.getHealth() ;
+            Hearts.get(index).setCurrentFrameIndex(2);
         }
     }
     public void setupHearts() {
@@ -66,9 +68,9 @@ private Player player;
         } else {
             player.health = 3;
         }
-      Hearts = new ArrayList<Image>();
+      Hearts = new ArrayList<Heart>();
         for(int i = 0; i< player.health; i++){
-            Image heart = new Image("sprites/heart.png",new Coordinate2D(50+(i*20),30),new Size(20,20));
+            Heart heart = new Heart("sprites/heart.png",new Coordinate2D(50+(i*20),30),new Size(20,20),1,2);
             Hearts.add(heart);
             System.out.println("HELP");
             addEntity(heart);

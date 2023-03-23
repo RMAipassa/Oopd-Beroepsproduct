@@ -4,13 +4,10 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 
-public class Image extends DynamicSpriteEntity {
-    public Image(String resource, Coordinate2D initialLocation, Size size) {
-        super(resource, initialLocation, size);
-    }
+public class Heart extends DynamicSpriteEntity {
 
-    public Image(String resource, Coordinate2D initialLocation) {
-        super(resource, initialLocation);
+    public Heart(String resource, Coordinate2D initialLocation, Size size, int rows, int columns) {
+        super(resource, initialLocation, size, rows, columns);
     }
 
     @Override
@@ -18,5 +15,3 @@ public class Image extends DynamicSpriteEntity {
         super.setCurrentFrameIndex(index);
     }
 }
-
-
