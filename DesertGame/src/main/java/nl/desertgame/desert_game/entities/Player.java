@@ -57,8 +57,15 @@ public class Player extends DynamicSpriteEntity implements KeyListener {
     public int getPotions() {
         return potions;
     }
+<<<<<<< Updated upstream
     public int getHealth(){
         return health;
+=======
+    public int getHealth(){return health;}
+
+    public void setHealth(int health){
+        this.health = health;
+>>>>>>> Stashed changes
     }
 
     @Override

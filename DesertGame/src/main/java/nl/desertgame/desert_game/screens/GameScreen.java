@@ -3,6 +3,7 @@ package nl.desertgame.desert_game.screens;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.scenes.DynamicScene;
+import com.github.hanyaeger.api.scenes.TileMapContainer;
 import com.github.hanyaeger.api.scenes.YaegerScene;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -12,28 +13,32 @@ import nl.desertgame.desert_game.entities.Heart;
 import nl.desertgame.desert_game.entities.Image;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.entities.Text;
+import nl.desertgame.desert_game.map.RoomMap;
+import nl.desertgame.desert_game.map.StartMap;
 
 import java.util.ArrayList;
 
 
-public class GameScreen extends DynamicScene {
+public class Level1 extends DynamicScene implements TileMapContainer {
     private DesertGame desertGame;
 private  Text amountPotion;
 private Player player;
     private ArrayList<Heart> Hearts;
     public int amountHearts;
 
-    public GameScreen(DesertGame desertGame) {
+    public Level1(DesertGame desertGame) {
         this.desertGame = desertGame;
     }
 
     @Override
     public void setupScene() {setBackgroundColor(Color.BLACK);
     }
-
+    public void setupTileMaps(){
+        addTileMap(new StartMap());
+    }
     @Override
     public void setupEntities() {
-        player = new Player(new Coordinate2D(50, 50),this);
+        player = new Player(this.desertGame, new Coordinate2D(50, 50));
         addEntity(player);
         setupPotions();
         setupHearts();
@@ -62,14 +67,14 @@ private Player player;
     }
     public void setupHearts() {
         if (desertGame.difficulty == 0) {
-            player.health = 5;
+            player.setHealth(5);
         } else if (desertGame.difficulty == 1) {
-            player.health = 4;
+            player.setHealth(4);
         } else {
-            player.health = 3;
+            player.setHealth(3);
         }
       Hearts = new ArrayList<Heart>();
-        for(int i = 0; i< player.health; i++){
+        for(int i = 0; i< player.getHealth(); i++){
             Heart heart = new Heart("sprites/heart.png",new Coordinate2D(50+(i*20),30),new Size(20,20),1,2);
             Hearts.add(heart);
             System.out.println("HELP");
