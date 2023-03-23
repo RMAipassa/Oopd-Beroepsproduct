@@ -30,7 +30,8 @@ public class Level1 extends DynamicScene implements TileMapContainer {
     }
 
     @Override
-    public void setupScene() {setBackgroundColor(Color.BLACK);
+    public void setupScene() {
+//        setBackgroundColor(Color.BLACK);
     }
 
     @Override

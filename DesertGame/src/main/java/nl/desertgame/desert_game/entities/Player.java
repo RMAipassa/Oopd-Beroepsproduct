@@ -7,6 +7,7 @@ import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.userinput.KeyListener;
+import javafx.scene.effect.ColorInput;
 import javafx.scene.input.KeyCode;
 import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.map.tiles.EntryTile;
@@ -28,7 +29,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     public static int previousScene;
     private final int BossScene = 5;
     private static int health;
-    private int potions;
+    private static int potions;
 
     public static boolean hasKey = false;
 
@@ -104,30 +105,36 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
 
 
     @Override
-    public void onCollision(List<Collider> collidingObjects) {
+    public void onCollision(Collider collidingObjects) {
         if (collidingObjects instanceof SolidTile) {
-            System.out.println("Colliding");
             colliding = true;
             setMotion(0, 0);
         } else if (collidingObjects instanceof ExitTile) {
-            System.out.println("Colliding");
             desertGame.setActiveScene(nextScene);
             setScenes(+1);
         } else if (collidingObjects instanceof EntryTile) {
-            System.out.println("Colliding");
             desertGame.setActiveScene(previousScene);
             setScenes(-1);
         } else if (collidingObjects instanceof Keydoor) {
-            System.out.println("Colliding");
             if(Player.hasKey) {
                 desertGame.setActiveScene(BossScene);
             }
         }
     }
 
-    public void sethealth(int health) {
-        Player.health = health;
+    @Override
+    public void checkForCollisions(List<Collider> colliders) {
+        Collided.super.checkForCollisions(colliders);
     }
+
+    public void sethealth(int hearts) {
+        health = hearts;
+    }
+
+    public void setPotions(int pots){
+        potions = pots;
+    }
+
     public int getHealth() {
         return health;
     }
