@@ -1,4 +1,4 @@
-package nl.desertgame.desert_game.map;
+package nl.desertgame.desert_game.map.tiles;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
@@ -7,11 +7,11 @@ import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 public class FloorTile extends SpriteEntity {
 
     private  static final String[] textures ={
-            "sprites/Top Left Tile.png",
-            "sprites/Top Right Tile.png",
-            "sprites/Bottom Right Tile.png",
-            "sprites/Bottom Left Tile.png",
-            "sprites/Floor.png",
+            "sprites/Floortiles/Top Left Tile.png",
+            "sprites/Floortiles/Top Right Tile.png",
+            "sprites/Floortiles/Bottom Right Tile.png",
+            "sprites/Floortiles/Bottom Left Tile.png",
+            "sprites/Floortiles/Floor.png",
     };
 
     /**
