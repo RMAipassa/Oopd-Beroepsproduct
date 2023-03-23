@@ -1,5 +1,6 @@
 package nl.desertgame.desert_game.entities;
 
+import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.entities.Collided;
@@ -16,12 +17,15 @@ import nl.desertgame.desert_game.map.tiles.SolidTile;
 import java.util.List;
 import java.util.Set;
 
-public class Player extends DynamicSpriteEntity implements KeyListener, Collider {
+public class Player extends DynamicSpriteEntity implements KeyListener, Collided, Collider {
 
     private DesertGame desertGame;
 
-    public int nextScene = 2;
-    public int previousScene= 0;
+    public static int nextScene;
+
+    public static int currentscene;
+
+    public static int previousScene;
     private final int BossScene = 5;
     private int health;
     private int potions;
@@ -33,8 +37,16 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collider
 
     boolean colliding = false;
 
-    public Player(Coordinate2D initialLocation) {
+    public Player(DesertGame desertgame,Coordinate2D initialLocation) {
         super("sprites/player.png", initialLocation, new Size(32, 32), 2, 2);
+        this.desertGame = desertgame;
+        setAnchorPoint(AnchorPoint.CENTER_CENTER);
+    }
+
+    public static void SetSceneNumbers() {
+        currentscene = 1;
+        nextScene = 2;
+        previousScene= 0;
     }
 
 
@@ -61,6 +73,11 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collider
                 setMotion(3, 0d);
                 setCurrentFrameIndex(1);
                 break;
+            case A: //was used for testing
+                System.out.println(nextScene);
+                desertGame.setActiveScene(nextScene);
+                setScenes(+1);
+                break;
             default:
                 setSpeed(0);
                 break;
@@ -76,51 +93,35 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collider
         super.setCurrentFrameIndex(index);
     }
 
-//    @Override
-//    public void onCollision(Collider collider) {
-//        if (collider instanceof SolidTile) {
-//            colliding = true;
-//            setMotion(0, 0);
-//        } else if (collider instanceof ExitTile) {
-//            desertGame.setActiveScene(nextScene);
-//            setScenes(+1);
-//        } else if (collider instanceof EntryTile) {
-//            desertGame.setActiveScene(previousScene);
-//            setScenes(-1);
-//        } else if (collider instanceof Keydoor) {
-//            if(hasKey = True) {
-//            desertGame.setActiveScene(BossScene);
-//              }
-//                else{
-//                    show that player needs key
-//             }
-//        }
-//    }
-
     private void setScenes(int change) {
-       this.previousScene =+ change;
-       this.nextScene =+ change;
+       previousScene += change;
+       currentscene += change;
+       nextScene += change;
+        System.out.println(currentscene);
+       System.out.println(previousScene);
+       System.out.println(nextScene);
     }
 
+
     @Override
-    public void onCollision(Collider collider) {
-        if (collider instanceof SolidTile) {
-            System.out.println("Coliding");
+    public void onCollision(List<Collider> collidingObjects) {
+        if (collidingObjects instanceof SolidTile) {
+            System.out.println("Colliding");
             colliding = true;
             setMotion(0, 0);
-        } else if (collider instanceof ExitTile) {
-            System.out.println("Coliding");
+        } else if (collidingObjects instanceof ExitTile) {
+            System.out.println("Colliding");
             desertGame.setActiveScene(nextScene);
             setScenes(+1);
-        } else if (collider instanceof EntryTile) {
-            System.out.println("Coliding");
+        } else if (collidingObjects instanceof EntryTile) {
+            System.out.println("Colliding");
             desertGame.setActiveScene(previousScene);
             setScenes(-1);
-        } else if (collider instanceof Keydoor) {
-            System.out.println("Coliding");
+        } else if (collidingObjects instanceof Keydoor) {
+            System.out.println("Colliding");
             if(Player.hasKey) {
-            desertGame.setActiveScene(BossScene);
-              }
+                desertGame.setActiveScene(BossScene);
+            }
         }
     }
 }

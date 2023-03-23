@@ -16,6 +16,7 @@ public class DesertGame extends YaegerGame {
     public void setupGame() {
         setGameTitle("Desert Game");
         setSize(new Size(1280, 640));
+        Player.SetSceneNumbers();
     }
 
     @Override
