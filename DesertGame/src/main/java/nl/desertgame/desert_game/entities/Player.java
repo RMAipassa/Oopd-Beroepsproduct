@@ -13,6 +13,8 @@ import javafx.scene.effect.ColorInput;
 import javafx.scene.input.KeyCode;
 import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.map.tiles.*;
+import nl.desertgame.desert_game.screens.GameScreen;
+import nl.desertgame.desert_game.screens.rooms.StartRoom;
 
 import java.util.List;
 import java.util.Set;
@@ -20,6 +22,7 @@ import java.util.Set;
 public class Player extends DynamicSpriteEntity implements KeyListener, Collided, Collider, UpdateExposer {
 
     private DesertGame desertGame;
+    private GameScreen room;
     public static int nextScene = 2;
 
     public static int currentscene = 1;
@@ -34,7 +37,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     public static boolean hasKey = true;
 
 
-    public Player(DesertGame desertgame,Coordinate2D initialLocation) {
+    public Player(DesertGame desertgame, GameScreen room, Coordinate2D initialLocation) {
         super("sprites/player.png", initialLocation, new Size(32, 32), 2, 2);
         this.desertGame = desertgame;
         setAnchorPoint(AnchorPoint.CENTER_CENTER);
@@ -89,7 +92,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
             KeyCode keyPressed = pressedKeys.iterator().next();
             switch (keyPressed) {
                 case LEFT -> {
-                    moveplayer(3);
+                    moveplayer(5);
 
                 }
                 case RIGHT -> {
@@ -108,6 +111,13 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
                     System.out.println(nextScene);
                     desertGame.setActiveScene(nextScene);
                     setScenes(+1);
+                }
+                case B -> {
+                    potions++;
+                    health--;
+                    room.updatePotions();
+                    System.out.println(health);
+                    System.out.println(potions);
                 }
                 default -> setSpeed(0);
             }

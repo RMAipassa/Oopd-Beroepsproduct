@@ -12,4 +12,5 @@ module nl.desertgame.desert_game {
     opens  sprites.SolidTiles;
     opens sprites.Objects;
     opens sprites.Treasure;
+    exports nl.desertgame.desert_game.screens.rooms;
 }
