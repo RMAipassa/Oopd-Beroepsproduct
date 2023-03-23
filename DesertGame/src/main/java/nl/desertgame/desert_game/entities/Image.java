@@ -13,10 +13,7 @@ public class Image extends DynamicSpriteEntity {
         super(resource, initialLocation);
     }
 
-    @Override
-    public void setCurrentFrameIndex(int index) {
-        super.setCurrentFrameIndex(index);
-    }
+
 }
 
 
