@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="test 2.0">
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/Level1.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/Level1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/Level1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/Level1.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +86,7 @@
     <configuration name="DesertGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nl.desertgame.desert_game.DesertGame" />
       <module name="Oopd-Beroepsproduct" />
-      <option name="PROGRAM_PARAMETERS" value="--noSplash" />
+      <option name="PROGRAM_PARAMETERS" value="--noSplash --showBB" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.desertgame.desert_game.*" />
@@ -113,6 +120,7 @@
       <workItem from="1679404359724" duration="25000" />
       <workItem from="1679473327961" duration="285000" />
       <workItem from="1679486442545" duration="10704000" />
+      <workItem from="1679579328425" duration="1049000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <created>1679060593486</created>

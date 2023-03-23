@@ -27,7 +27,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
 
     public static int previousScene;
     private final int BossScene = 5;
-    private int health;
+    private static int health;
     private int potions;
 
     public static boolean hasKey = false;
@@ -123,5 +123,12 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
                 desertGame.setActiveScene(BossScene);
             }
         }
+    }
+
+    public void sethealth(int health) {
+        Player.health = health;
+    }
+    public int getHealth() {
+        return health;
     }
 }
