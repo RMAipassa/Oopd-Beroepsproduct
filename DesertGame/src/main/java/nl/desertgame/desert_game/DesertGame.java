@@ -3,7 +3,7 @@ package nl.desertgame.desert_game;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.YaegerGame;
 import nl.desertgame.desert_game.screens.*;
-import nl.desertgame.desert_game.screens.rooms.*;
+import nl.desertgame.desert_game.entities.Player;
 
 
 public class DesertGame extends YaegerGame {
