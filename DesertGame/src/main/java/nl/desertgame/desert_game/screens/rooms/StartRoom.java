@@ -15,7 +15,7 @@ import nl.desertgame.desert_game.screens.GameScreen;
 import java.util.ArrayList;
 
 
-public class StartRoom extends GameScreen implements TileMapContainer, Inventory {
+public class StartRoom extends GameScreen implements TileMapContainer {
     private DesertGame desertGame;
     private StartRoom startroom;
     private  Text amountPotion;
@@ -38,18 +38,14 @@ public class StartRoom extends GameScreen implements TileMapContainer, Inventory
     public void setupEntities() {
         player = new Player(desertGame,this,new Coordinate2D(50, 320));
         addEntity(player);
-        setupPotions();
+        Image potions = new Image("sprites/potion.png", new Coordinate2D(50, 50), new Size(32, 32));
+        addEntity(potions);
+        amountPotion = new Potion(player);
+        addEntity(amountPotion);
         setupHearts();
     }
 
-    public void setupPotions() {
-        Image potions = new Image("sprites/potion.png", new Coordinate2D(50, 50), new Size(32, 32));
-        addEntity(potions);
-        this.amountPotion = new Text(new Coordinate2D(80, 52), player.getPotions() + "x");
-        amountPotion.setFill(Color.WHITE);
-        amountPotion.setFont(Font.font("Roboto", FontWeight.BOLD, 20));
-        addEntity(amountPotion);
-    }
+
     public void updatePotions(){
         this.amountPotion.setText(this.player.getPotions()+"x");
     }

@@ -1,17 +1,20 @@
 package nl.desertgame.desert_game.screens.rooms;
 
 import com.github.hanyaeger.api.Coordinate2D;
-import com.github.hanyaeger.api.scenes.DynamicScene;
+import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
 import javafx.scene.paint.Color;
 import nl.desertgame.desert_game.DesertGame;
-import nl.desertgame.desert_game.entities.Inventory;
+import nl.desertgame.desert_game.entities.Heart;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.map.MidMap;
 import nl.desertgame.desert_game.screens.GameScreen;
 
-public class MiddleBoss extends GameScreen implements TileMapContainer, Inventory {
+import java.util.ArrayList;
+
+public class MiddleBoss extends GameScreen implements TileMapContainer {
     private DesertGame desertGame;
+    private ArrayList<Heart> Hearts;
 
     public MiddleBoss(DesertGame desertGame) {
         super(desertGame);
@@ -33,14 +36,12 @@ public class MiddleBoss extends GameScreen implements TileMapContainer, Inventor
         player = new Player(desertGame ,this,new Coordinate2D(620, 585));
         addEntity(player);
     }
-
-    @Override
-    public void updatePotions() {
-
-    }
-
-    @Override
-    public void updateHearts() {
-
+    public void setupHearts() {
+        Hearts = new ArrayList<Heart>();
+        for(int i = 0; i< GameScreen.getTotalHealth(); i++){
+            Heart heart = new Heart("sprites/heart.png",new Coordinate2D(50+(i*20),30),new Size(20,20),1,2);
+            Hearts.add(heart);
+            addEntity(heart);
+        }
     }
 }

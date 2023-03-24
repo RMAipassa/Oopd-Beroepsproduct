@@ -115,7 +115,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
                 case B -> {
                     potions++;
                     health--;
-                    room.updatePotions();
+                    ;
                     System.out.println(health);
                     System.out.println(potions);
                 }

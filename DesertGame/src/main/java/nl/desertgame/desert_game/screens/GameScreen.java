@@ -20,10 +20,6 @@ private static int totalHealth;
  public static int getTotalHealth(){
      return totalHealth;
  }
- public void updatePotion(){}
-    public void updateHealth(){}
 
 
-    public void updatePotions() {
-    }
 }
