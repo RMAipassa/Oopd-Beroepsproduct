@@ -8,22 +8,21 @@ import javafx.scene.paint.Color;
 import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.entities.Heart;
 import nl.desertgame.desert_game.entities.Player;
-import nl.desertgame.desert_game.map.RoomMap;
+import nl.desertgame.desert_game.map.MidMap;
 
 import java.util.ArrayList;
 
-public class EnemyChoiceRoom extends DynamicScene implements TileMapContainer {
-
+public class MiddleBoss extends DynamicScene implements TileMapContainer {
     private DesertGame desertGame;
     private static Player player;
     private static ArrayList<Heart> Hearts;
 
-    public EnemyChoiceRoom(DesertGame desertGame) {
+    public MiddleBoss(DesertGame desertGame) {
         this.desertGame = desertGame;
     }
     @Override
-    public void setupTileMaps(){
-        addTileMap(new RoomMap());
+    public void setupTileMaps() {
+        addTileMap(new MidMap());
     }
 
     @Override
@@ -33,7 +32,7 @@ public class EnemyChoiceRoom extends DynamicScene implements TileMapContainer {
 
     @Override
     public void setupEntities() {
-        player = new Player(desertGame ,new Coordinate2D(50, 320));
+        player = new Player(desertGame ,new Coordinate2D(620, 585));
         addEntity(player);
         setupHearts();
     }
