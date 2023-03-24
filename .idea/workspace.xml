@@ -5,16 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="test 2.0">
+      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Enemies/Boss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Enemies/Enemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Enemies/MidBoss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Enemies/Monster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/Enemies/mummy boss.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Objects/Barrel.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Objects/Barrel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Objects/Steen.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Objects/Steen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/BossRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/BossRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/EnemyChoiceRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/EnemyChoiceRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/FakeChestRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/FakeChestRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/MiddleBoss.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/MiddleBoss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/StartRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/screens/StartRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Objects/Barrel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Objects/Barrel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Objects/Steen.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Objects/Steen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/entities/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/EnemyChoiceRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/EnemyChoiceRoom.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/StartRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/Output/production/Oopd-Beroepsproduct/nl/desertgame/desert_game/screens/StartRoom.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,18 +85,18 @@
       <recent name="C:\Users\semgr\Desktop\OOPD-BEROEPSPRODUCT\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites\Enemies" />
       <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites\SolidTiles" />
       <recent name="C:\Users\semgr\OneDrive\OOPD-BEROEPSPRODUCT LOKAAL\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites" />
       <recent name="C:\Users\semgr\Desktop\OOPD-BEROEPSPRODUCT\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites" />
       <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\src\main\resources" />
-      <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\src\main\resources\backgrounds" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="DesertGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nl.desertgame.desert_game.DesertGame" />
       <module name="Oopd-Beroepsproduct" />
-      <option name="PROGRAM_PARAMETERS" value="--noSplash --showBB --showDebug" />
+      <option name="PROGRAM_PARAMETERS" value="--noSplash --showBB " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.desertgame.desert_game.*" />
@@ -125,7 +131,7 @@
       <workItem from="1679473327961" duration="285000" />
       <workItem from="1679486442545" duration="10704000" />
       <workItem from="1679579328425" duration="10071000" />
-      <workItem from="1679663271249" duration="1157000" />
+      <workItem from="1679663271249" duration="5807000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <created>1679060593486</created>

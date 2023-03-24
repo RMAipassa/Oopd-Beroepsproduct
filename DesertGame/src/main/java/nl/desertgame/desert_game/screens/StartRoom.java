@@ -1,13 +1,16 @@
 package nl.desertgame.desert_game.screens;
 
+import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.desertgame.desert_game.DesertGame;
+import nl.desertgame.desert_game.entities.Enemies.Boss;
 import nl.desertgame.desert_game.entities.Heart;
 import nl.desertgame.desert_game.entities.Image;
 import nl.desertgame.desert_game.entities.Player;
@@ -22,6 +25,8 @@ public class StartRoom extends DynamicScene implements TileMapContainer {
     private  Text amountPotion;
     private static Player player;
     private static ArrayList<Heart> Hearts;
+
+    public Boss EndBoss = new Boss(new Coordinate2D(640, 320));
     public int amountHearts;
 
     public StartRoom(DesertGame desertGame) {
@@ -35,6 +40,7 @@ public class StartRoom extends DynamicScene implements TileMapContainer {
 
     @Override
     public void setupEntities() {
+        addEntity(EndBoss);
         player = new Player(desertGame ,new Coordinate2D(50, 320));
         addEntity(player);
         setupPotions();
@@ -58,7 +64,7 @@ public class StartRoom extends DynamicScene implements TileMapContainer {
             index = player.getHealth() ;
             Hearts.get(index).setCurrentFrameIndex(1);
         } else if (Hearts.size() < player.getHealth()){
-            index = player.getHealth() ;
+            index = player.getHealth();
             Hearts.get(index).setCurrentFrameIndex(2);
         }
     }
@@ -77,6 +83,14 @@ public class StartRoom extends DynamicScene implements TileMapContainer {
             System.out.println("HELP");
             addEntity(heart);
         }
+    }
+
+
+    public static Coordinate2D getPlayerLocation(){
+        return player.getAnchorLocation();
+    }
+    public  Coordinate2D getBossLocation(){
+        return EndBoss.getAnchorLocation();
     }
 
     @Override

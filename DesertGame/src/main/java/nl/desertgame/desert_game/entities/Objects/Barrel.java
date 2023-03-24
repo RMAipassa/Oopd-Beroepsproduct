@@ -1,13 +1,19 @@
 package nl.desertgame.desert_game.entities.Objects;
 
-import javafx.scene.Node;
-import nl.desertgame.desert_game.entities.Object;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
-import java.util.Optional;
+public class Barrel extends SpriteEntity implements Object {
+    public Barrel(Coordinate2D initialLocation, String resource) {
+        super(resource, initialLocation);
+    }
 
-public class Barrel implements Object {
-    @Override
-    public Optional<? extends Node> getNode() {
-        return Optional.empty();
+    public String[] textures = {
+            "sprites/Objects/barrel.png",
+            "sprites/Objects/barrels.png",
+    };
+
+    public String[] getTextures(){
+        return textures;
     }
 }

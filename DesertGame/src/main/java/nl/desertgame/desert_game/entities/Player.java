@@ -12,8 +12,12 @@ import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.effect.ColorInput;
 import javafx.scene.input.KeyCode;
 import nl.desertgame.desert_game.DesertGame;
+import nl.desertgame.desert_game.entities.Enemies.Boss;
+import nl.desertgame.desert_game.entities.Enemies.Enemy;
+import nl.desertgame.desert_game.entities.Enemies.MidBoss;
 import nl.desertgame.desert_game.map.tiles.*;
 import nl.desertgame.desert_game.screens.*;
+import nl.desertgame.desert_game.screens.StartRoom;
 
 import java.util.List;
 import java.util.Set;
@@ -111,13 +115,14 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
                     setScenes(+1);
                 }
                 case X -> { //was used for testing
-                    doDamage();
+                    doDamage(1);
                 }
                 case Z -> { //was used for testing
                     healPlayer();
                 }
-                case C -> { //was used for testing
-                    System.out.println(currentscene);
+                case C -> {
+
+                    System.out.println(StartRoom.getPlayerLocation());
                 }
                 default -> setSpeed(0);
             }
@@ -182,12 +187,25 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
             desertGame.setActiveScene(2);
             currentscene = 2;
 
+        } else if( collidingObjects instanceof Object){
+            isColliding = true;
+            setMotion(0, 0);
+        }else if( collidingObjects instanceof Enemy){
+            if(collidingObjects instanceof Boss) {
+                doDamage(3);
+            } else if(collidingObjects instanceof MidBoss){
+                doDamage(2);
+            } else {
+                doDamage(1);
+            }
+
+
         }
     }
 
 
-    public void doDamage() {
-        sethealth(-1);
+    public void doDamage(int damage) {
+        sethealth(-damage);
         updateSceneHearts();
     }
     public void healPlayer() {
