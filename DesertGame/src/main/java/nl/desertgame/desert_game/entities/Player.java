@@ -13,7 +13,8 @@ import javafx.scene.effect.ColorInput;
 import javafx.scene.input.KeyCode;
 import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.map.tiles.*;
-import nl.desertgame.desert_game.screens.*;
+import nl.desertgame.desert_game.screens.GameScreen;
+import nl.desertgame.desert_game.screens.rooms.StartRoom;
 
 import java.util.List;
 import java.util.Set;
@@ -21,6 +22,7 @@ import java.util.Set;
 public class Player extends DynamicSpriteEntity implements KeyListener, Collided, Collider, UpdateExposer {
 
     private DesertGame desertGame;
+    private GameScreen room;
     public static int nextScene = 2;
 
     public static int currentscene = 1;
@@ -35,7 +37,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     public static boolean hasKey = true;
 
 
-    public Player(DesertGame desertgame,Coordinate2D initialLocation) {
+    public Player(DesertGame desertgame, GameScreen room, Coordinate2D initialLocation) {
         super("sprites/player.png", initialLocation, new Size(32, 32), 2, 2);
         this.desertGame = desertgame;
         setAnchorPoint(AnchorPoint.CENTER_CENTER);
@@ -90,7 +92,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
             KeyCode keyPressed = pressedKeys.iterator().next();
             switch (keyPressed) {
                 case LEFT -> {
-                    moveplayer(3);
+                    moveplayer(5);
 
                 }
                 case RIGHT -> {
@@ -110,14 +112,12 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
                     desertGame.setActiveScene(nextScene);
                     setScenes(+1);
                 }
-                case X -> { //was used for testing
-                    doDamage();
-                }
-                case Z -> { //was used for testing
-                    healPlayer();
-                }
-                case C -> { //was used for testing
-                    System.out.println(currentscene);
+                case B -> {
+                    potions++;
+                    health--;
+                    ;
+                    System.out.println(health);
+                    System.out.println(potions);
                 }
                 default -> setSpeed(0);
             }
@@ -156,7 +156,6 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     }
 
 
-
     @Override
     public void onCollision(Collider collidingObjects) {
         if (collidingObjects instanceof SolidTile) {
@@ -171,52 +170,22 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
         } else if (collidingObjects instanceof Keydoor) {
             if(Player.hasKey) {
                 desertGame.setActiveScene(nextScene);
-                setScenes(+1);
             } else {
             System.out.println("player has no key");
             }
         } else if (collidingObjects instanceof TopDoor) {
             desertGame.setActiveScene(5);
-            currentscene = 5;
         } else if (collidingObjects instanceof BottomDoor) {
             desertGame.setActiveScene(2);
-            currentscene = 2;
 
         }
     }
 
 
-    public void doDamage() {
-        sethealth(-1);
-        updateSceneHearts();
-    }
-    public void healPlayer() {
-        sethealth(1);
-        updateSceneHearts();
-    }
 
-    public void updateSceneHearts() {
-        switch (currentscene) {
-            case 1 -> {
-                StartRoom.updateHearts();
-            }
-            case 2 -> {
-                EnemyChoiceRoom.updateHearts();
-            }
-            case 3 -> {
-                FakeChestRoom.updateHearts();
-            }
-            case 4 -> {
-                BossRoom.updateHearts();
-            }
-            case 5 -> {
-                MiddleBoss.updateHearts();
-            }
-        }
-    }
 
     public void sethealth(int hearts) {
-        health = getHealth() + hearts;
+        health = hearts;
     }
 
     public void setPotions(int pots){
