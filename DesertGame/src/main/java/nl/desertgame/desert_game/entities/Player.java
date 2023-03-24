@@ -32,6 +32,14 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     public static int previousScene = 0;
     private static int health;
     private static int potions;
+    private static int totalHealth;
+
+    public static void setTotalHealth(int totalHealth) {
+        Player.totalHealth = totalHealth;
+    }
+    public static int getTotalHealth(){
+        return totalHealth;
+    }
 
     boolean isColliding = false;
     static int direction;
@@ -205,11 +213,11 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
 
 
     public void doDamage(int damage) {
-        sethealth(-damage);
+        setHealth(-damage);
         updateSceneHearts();
     }
     public void healPlayer() {
-        sethealth(1);
+        setHealth(1);
         updateSceneHearts();
     }
 
@@ -233,15 +241,15 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
         }
     }
 
-    public void sethealth(int hearts) {
+    public static void setHealth(int hearts) {
         health = getHealth() + hearts;
     }
 
-    public void setPotions(int pots){
+    public static void setPotions(int pots){
         potions = pots;
     }
 
-    public int getHealth() {
+    public static int getHealth() {
         return health;
     }
 }

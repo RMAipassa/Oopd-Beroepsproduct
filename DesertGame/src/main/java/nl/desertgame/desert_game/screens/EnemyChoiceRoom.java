@@ -10,13 +10,14 @@ import nl.desertgame.desert_game.entities.Heart;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.map.RoomMap;
 
-import java.util.ArrayList;
+import static nl.desertgame.desert_game.entities.Player.getTotalHealth;
+
 
 public class EnemyChoiceRoom extends DynamicScene implements TileMapContainer {
 
     private DesertGame desertGame;
     private static Player player;
-    private static ArrayList<Heart> Hearts;
+    private static Heart[] hearts;
 
     public EnemyChoiceRoom(DesertGame desertGame) {
         this.desertGame = desertGame;
@@ -38,23 +39,24 @@ public class EnemyChoiceRoom extends DynamicScene implements TileMapContainer {
         setupHearts();
     }
     public void setupHearts() {
-        Hearts = new ArrayList<Heart>();
-        for(int i = 0; i< player.getHealth(); i++){
-            Heart heart = new Heart("sprites/heart.png",new Coordinate2D(50+(i*20),30),new Size(20,20),1,2);
-            Hearts.add(heart);
-            System.out.println("HELP");
+        hearts = new Heart[getTotalHealth()];
+        for(int i = 0; i < getTotalHealth(); i++) {
+            Heart heart = new Heart("sprites/heart.png", new Coordinate2D(50+(i*20),30), new Size(20,20), 1, 2);
+            hearts[i] = heart;
             addEntity(heart);
         }
+        updateHearts();
     }
-
-    public static void updateHearts(){
-        int index;
-        if(Hearts.size() > player.getHealth()){
-            index = player.getHealth() ;
-            Hearts.get(index).setCurrentFrameIndex(1);
-        } else if (Hearts.size() < player.getHealth()){
-            index = player.getHealth() ;
-            Hearts.get(index).setCurrentFrameIndex(2);
+    public static void updateHearts() {
+        int currentHealth = Player.getHealth();
+        if(hearts.length != currentHealth){
+            for (int i = 0; i < hearts.length; i++) {
+                if (i < currentHealth) {
+                    hearts[i].setCurrentFrameIndex(0); // heart is full
+                } else {
+                    hearts[i].setCurrentFrameIndex(1); // heart is empty
+                }
+            }
         }
     }
 }
