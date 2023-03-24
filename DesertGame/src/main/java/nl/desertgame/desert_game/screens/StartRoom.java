@@ -3,6 +3,7 @@ package nl.desertgame.desert_game.screens;
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
@@ -20,13 +21,13 @@ import nl.desertgame.desert_game.map.StartMap;
 import java.util.ArrayList;
 
 
-public class StartRoom extends DynamicScene implements TileMapContainer {
+public class StartRoom extends DynamicScene implements TileMapContainer, UpdateExposer {
     private DesertGame desertGame;
     private  Text amountPotion;
     private static Player player;
     private static Heart[] hearts;
 
-    public Boss EndBoss = new Boss(new Coordinate2D(640, 320));
+    public static Boss EndBoss = new Boss(new Coordinate2D(640, 320));
     public int amountHearts;
 
     public StartRoom(DesertGame desertGame) {
@@ -99,10 +100,18 @@ public class StartRoom extends DynamicScene implements TileMapContainer {
         return EndBoss.getAnchorLocation();
     }
 
+    public static double getangle(){
+        return EndBoss.angleTo(player);
+    }
+    @Override
+    public void explicitUpdate(long l) {
+        EndBoss.moveboss(getangle());
+    }
     @Override
     public void setupTileMaps() {
         addTileMap(new StartMap());
     }
 }
+
 
 
