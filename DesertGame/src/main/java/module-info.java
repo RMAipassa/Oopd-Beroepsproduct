@@ -7,11 +7,10 @@ module nl.desertgame.desert_game {
     opens backgrounds;
     exports nl.desertgame.desert_game.map.tiles;
     exports nl.desertgame.desert_game.screens;
-    exports nl.desertgame.desert_game.entities.Enemies;
     opens sprites;
     opens sprites.Floortiles;
     opens  sprites.SolidTiles;
     opens sprites.Objects;
     opens sprites.Treasure;
-    opens sprites.Enemies;
+    exports nl.desertgame.desert_game.screens.rooms;
 }

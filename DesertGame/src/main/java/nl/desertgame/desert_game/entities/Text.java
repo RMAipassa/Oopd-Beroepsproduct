@@ -7,7 +7,10 @@ import com.github.hanyaeger.api.entities.impl.TextEntity;
 
 public class Text extends DynamicTextEntity {
     public Text(Coordinate2D initialLocation, String text) {
+
         super(initialLocation, text);
+
     }
+
 
 }
