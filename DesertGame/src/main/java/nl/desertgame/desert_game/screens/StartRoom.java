@@ -20,8 +20,8 @@ import java.util.ArrayList;
 public class StartRoom extends DynamicScene implements TileMapContainer {
     private DesertGame desertGame;
     private  Text amountPotion;
-    private Player player;
-    private ArrayList<Heart> Hearts;
+    private static Player player;
+    private static ArrayList<Heart> Hearts;
     public int amountHearts;
 
     public StartRoom(DesertGame desertGame) {
@@ -50,9 +50,9 @@ public class StartRoom extends DynamicScene implements TileMapContainer {
         addEntity(amountPotion);
     }
     public void updatePotions(){
-        this.amountPotion.setText(this.player.getPotions()+"x");
+        this.amountPotion.setText(player.getPotions()+"x");
     }
-    public void updateHearts(){
+    public static void updateHearts(){
         int index;
         if(Hearts.size() > player.getHealth()){
             index = player.getHealth() ;
