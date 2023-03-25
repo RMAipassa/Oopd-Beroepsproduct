@@ -33,14 +33,6 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     private static int health;
     private static int potions;
     private static int totalHealth;
-
-    public static void setTotalHealth(int totalHealth) {
-        Player.totalHealth = totalHealth;
-    }
-    public static int getTotalHealth(){
-        return totalHealth;
-    }
-
     boolean isColliding = false;
     static int direction;
 
@@ -64,7 +56,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
         if(isColliding) {
             switch (direction) {
                 case 2 -> { //moving up
-                    if (!pressedKeys.contains(KeyCode.UP)) {
+                    if (!pressedKeys.contains(KeyCode.W)) {
                         Move(pressedKeys);
                     } else {
                         setSpeed(0);
@@ -72,21 +64,21 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
                     }
                 }
                 case 1 -> {
-                    if (!pressedKeys.contains(KeyCode.RIGHT)) {
+                    if (!pressedKeys.contains(KeyCode.D)) {
                         Move(pressedKeys);
                     } else {
                         setSpeed(0);
                     }
                 }
                 case 0 -> {
-                    if (!pressedKeys.contains(KeyCode.DOWN)) {
+                    if (!pressedKeys.contains(KeyCode.S)) {
                         Move(pressedKeys);
                     } else {
                         setSpeed(0);
                     }
                 }
                 case 3 -> {
-                    if (!pressedKeys.contains(KeyCode.LEFT)) {
+                    if (!pressedKeys.contains(KeyCode.A)) {
                         Move(pressedKeys);
                     } else {
                         setSpeed(0);
@@ -101,34 +93,39 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     void Move(Set<KeyCode> pressedKeys) {
             KeyCode keyPressed = pressedKeys.iterator().next();
             switch (keyPressed) {
-                case LEFT -> {
+                case A -> {
                     moveplayer(3);
 
                 }
-                case RIGHT -> {
+                case D -> {
                     moveplayer(1);
 
                 }
-                case UP -> {
+                case W -> {
                     moveplayer(2);
 
                 }
-                case DOWN -> {
+                case S -> {
                     moveplayer(0);
 
                 }
-                case A -> { //was used for testing
+                case Z -> { //was used for testing
                     System.out.println(nextScene);
                     desertGame.setActiveScene(nextScene);
                     setScenes(+1);
                 }
-                case X -> { //was used for testing
+                case UP -> { //was used for testing
                     doDamage(1);
                 }
-                case Z -> { //was used for testing
+                case X -> { //was used for testing
                     healPlayer();
                 }
                 case C -> {
+
+                    System.out.println(StartRoom.getPlayerLocation());
+                }
+                case O -> {
+                Player.setPotions(5);
 
                     System.out.println(StartRoom.getPlayerLocation());
                 }
@@ -150,9 +147,6 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
         isColliding = false;
     }
 
-    public int getPotions() {
-        return potions;
-    }
 
     @Override
     public void setCurrentFrameIndex(int index) {
@@ -214,42 +208,61 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
 
     public void doDamage(int damage) {
         setHealth(-damage);
-        updateSceneHearts();
+        updateSceneHeartsAndPotions();
     }
     public void healPlayer() {
-        setHealth(1);
-        updateSceneHearts();
+        if(getPotions() == 0){
+            System.out.println("You don't have any potions anymore...");
+        } else {
+            setPotions(-1);
+            System.out.println("You have " + potions + " left");
+            updateSceneHeartsAndPotions();
+        }
     }
 
-    public void updateSceneHearts() {
+    public void updateSceneHeartsAndPotions() {
         switch (currentscene) {
             case 1 -> {
                 StartRoom.updateHearts();
+                StartRoom.updatePotions();
             }
             case 2 -> {
                 EnemyChoiceRoom.updateHearts();
+                EnemyChoiceRoom.updatePotions();
             }
             case 3 -> {
                 FakeChestRoom.updateHearts();
+                FakeChestRoom.updatePotions();
             }
             case 4 -> {
                 BossRoom.updateHearts();
+                BossRoom.updatePotions();
             }
             case 5 -> {
                 MiddleBoss.updateHearts();
+                MiddleBoss.updatePotions();
             }
         }
     }
 
     public static void setHealth(int hearts) {
-        health = getHealth() + hearts;
+        health = health + hearts;
     }
 
     public static void setPotions(int pots){
-        potions = pots;
+        potions = potions + pots;
     }
 
     public static int getHealth() {
         return health;
+    }
+    public static void setTotalHealth(int totalHealth) {
+        Player.totalHealth = totalHealth;
+    }
+    public static int getTotalHealth(){
+        return totalHealth;
+    }
+    public static int getPotions() {
+        return potions;
     }
 }

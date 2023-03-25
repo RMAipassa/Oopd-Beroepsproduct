@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class StartRoom extends DynamicScene implements TileMapContainer, UpdateExposer {
     private DesertGame desertGame;
-    private  Text amountPotion;
+    private static Text amountPotion;
     private static Player player;
     private static Heart[] hearts;
 
@@ -51,24 +51,22 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
     public void setupPotions() {
         Image potions = new Image("sprites/potion.png", new Coordinate2D(50, 50), new Size(32, 32));
         addEntity(potions);
-        this.amountPotion = new Text(new Coordinate2D(80, 52), player.getPotions() + "x");
+        amountPotion = new Text(new Coordinate2D(80, 52), Player.getPotions() + "x");
         amountPotion.setFill(Color.WHITE);
         amountPotion.setFont(Font.font("Roboto", FontWeight.BOLD, 20));
         addEntity(amountPotion);
     }
-    public void updatePotions(){
-        this.amountPotion.setText(player.getPotions()+"x");
+    public static void updatePotions(){
+        amountPotion.setText(Player.getPotions()+"x");
     }
     public static void updateHearts() {
         int currentHealth = Player.getHealth();
-        if(hearts.length != currentHealth){
         for (int i = 0; i < hearts.length; i++) {
             if (i < currentHealth) {
                 hearts[i].setCurrentFrameIndex(0); // heart is full
             } else {
                 hearts[i].setCurrentFrameIndex(1); // heart is empty
             }
-        }
         }
     }
 
