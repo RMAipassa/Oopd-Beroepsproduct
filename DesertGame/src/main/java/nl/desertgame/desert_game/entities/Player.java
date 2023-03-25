@@ -190,9 +190,10 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
             currentscene = 2;
 
         } else if( collidingObjects instanceof Object){
-            isColliding = true;
+
             setMotion(0, 0);
         }else if( collidingObjects instanceof Enemy){
+            isColliding = true;
             if(collidingObjects instanceof Boss) {
                 doDamage(3);
             } else if(collidingObjects instanceof MidBoss){

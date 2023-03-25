@@ -7,21 +7,21 @@ import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
+import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
+import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.desertgame.desert_game.DesertGame;
+import nl.desertgame.desert_game.entities.*;
 import nl.desertgame.desert_game.entities.Enemies.Boss;
-import nl.desertgame.desert_game.entities.Heart;
-import nl.desertgame.desert_game.entities.Image;
-import nl.desertgame.desert_game.entities.Player;
-import nl.desertgame.desert_game.entities.Text;
+import nl.desertgame.desert_game.entities.Objects.Box;
 import nl.desertgame.desert_game.map.StartMap;
 
 import java.util.ArrayList;
 
 
-public class StartRoom extends DynamicScene implements TileMapContainer, UpdateExposer {
+public class StartRoom extends DynamicScene implements TileMapContainer, UpdateExposer, MouseButtonPressedListener {
     private DesertGame desertGame;
     private static Text amountPotion;
     private static Player player;
@@ -42,6 +42,7 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
     @Override
     public void setupEntities() {
         addEntity(EndBoss);
+        addEntity(new Box(new Coordinate2D(340,550)));
         player = new Player(desertGame ,new Coordinate2D(50, 320));
         addEntity(player);
         setupPotions();
@@ -98,16 +99,18 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
         return EndBoss.getAnchorLocation();
     }
 
-    public static double getangle(){
-        return EndBoss.angleTo(player);
-    }
     @Override
     public void explicitUpdate(long l) {
-        EndBoss.moveboss(getangle());
+        EndBoss.moveboss(EndBoss.angleTo(player));
     }
     @Override
     public void setupTileMaps() {
         addTileMap(new StartMap());
+    }
+
+    @Override
+    public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
+        System.out.println(EndBoss.getAnchorPoint());
     }
 }
 
