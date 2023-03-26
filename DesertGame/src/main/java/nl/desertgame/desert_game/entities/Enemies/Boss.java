@@ -61,7 +61,7 @@ public class Boss extends DynamicSpriteEntity implements Enemy, Collided, Update
             if(withObject){
                 setMotion(0,direction);
             }
-            setMotion(-150, -direction);
+            setMotion(-200, -direction);
         } else{
             setMotion(2, direction);
         }

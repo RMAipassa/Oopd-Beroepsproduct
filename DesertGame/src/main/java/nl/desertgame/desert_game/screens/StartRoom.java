@@ -101,7 +101,7 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
 
     @Override
     public void explicitUpdate(long l) {
-//        EndBoss.moveboss(EndBoss.angleTo(player));
+        EndBoss.moveboss(EndBoss.angleTo(player));
     }
     @Override
     public void setupTileMaps() {

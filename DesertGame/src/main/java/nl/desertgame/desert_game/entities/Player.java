@@ -213,7 +213,12 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     }
 
     public void doDamage(int damage) {
-        setHealth(-damage);
+        int currenthealth = getHealth();
+        if (currenthealth < damage) {
+            setHealth(-currenthealth); // should be kill player and to defeat-screen
+        } else {
+            setHealth(-damage);
+        }
     }
     public void healPlayer() {
         if(getPotions() == 0){
