@@ -206,6 +206,10 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
         }
     }
 
+    @Override
+    public double angleTo(Coordinate2D otherLocation) {
+        return super.angleTo(otherLocation);
+    }
 
     public void doDamage(int damage) {
         setHealth(-damage);

@@ -13,4 +13,5 @@ public class Box extends SpriteEntity implements Object {
             "sprites/Objects/boxes.png",
     };
 
+
 }

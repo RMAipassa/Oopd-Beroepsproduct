@@ -9,6 +9,8 @@ import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import nl.desertgame.desert_game.entities.Objects.Object;
 import nl.desertgame.desert_game.entities.Player;
+import nl.desertgame.desert_game.entities.Weapons.Bullet;
+import nl.desertgame.desert_game.entities.Weapons.Projectile;
 
 
 public class Boss extends DynamicSpriteEntity implements Enemy, Collided, UpdateExposer {
@@ -38,6 +40,8 @@ public class Boss extends DynamicSpriteEntity implements Enemy, Collided, Update
             System.out.println("hit box");
             withObject = true;
             setMotion(0,0);
+        }else if(collidingObjects instanceof Projectile){
+            System.out.println("Boss takes damage");
         }
     }
     @Override

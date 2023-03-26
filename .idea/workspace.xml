@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="test 2.0">
+      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Weapons/Bullet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Weapons/Projectile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesertGame/src/main/resources/sprites/Weapons/bullet.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Enemies/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Enemies/Boss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Objects/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Objects/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/DesertGame/src/main/java/nl/desertgame/desert_game/entities/Player.java" afterDir="false" />
@@ -24,6 +28,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -76,11 +81,11 @@
       <recent name="C:\Users\semgr\Desktop\OOPD-BEROEPSPRODUCT\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites\Weapons" />
       <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites\Enemies" />
       <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites\SolidTiles" />
       <recent name="C:\Users\semgr\OneDrive\OOPD-BEROEPSPRODUCT LOKAAL\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites" />
       <recent name="C:\Users\semgr\Desktop\OOPD-BEROEPSPRODUCT\Oopd-Beroepsproduct\DesertGame\src\main\resources\sprites" />
-      <recent name="C:\Users\Ruben\Documents\HAN\OOPD\Oopd-Beroepsproduct\src\main\resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -123,7 +128,8 @@
       <workItem from="1679486442545" duration="10704000" />
       <workItem from="1679579328425" duration="10071000" />
       <workItem from="1679663271249" duration="6146000" />
-      <workItem from="1679751381956" duration="4945000" />
+      <workItem from="1679751381956" duration="5129000" />
+      <workItem from="1679838729447" duration="2545000" />
     </task>
     <task id="LOCAL-00001" summary="testing">
       <created>1679060593486</created>

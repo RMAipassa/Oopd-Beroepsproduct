@@ -17,7 +17,7 @@ import nl.desertgame.desert_game.entities.*;
 import nl.desertgame.desert_game.entities.Enemies.Boss;
 import nl.desertgame.desert_game.entities.Objects.Box;
 import nl.desertgame.desert_game.map.StartMap;
-
+import nl.desertgame.desert_game.entities.Weapons.Bullet;
 import java.util.ArrayList;
 
 
@@ -101,7 +101,7 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
 
     @Override
     public void explicitUpdate(long l) {
-        EndBoss.moveboss(EndBoss.angleTo(player));
+//        EndBoss.moveboss(EndBoss.angleTo(player));
     }
     @Override
     public void setupTileMaps() {
@@ -110,7 +110,9 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
 
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-        System.out.println(EndBoss.getAnchorPoint());
+        Bullet bullet = new Bullet(getPlayerLocation());
+       addEntity(bullet);
+       bullet.moveBullet(player.angleTo(coordinate2D));
     }
 }
 
