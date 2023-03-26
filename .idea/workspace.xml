@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="test 2.0">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/github_han_yaeger.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/github_han_yaeger1.xml" beforeDir="false" />
@@ -66,6 +67,9 @@
       <change beforePath="$PROJECT_DIR$/lib/yaeger-2022.2023-sources.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/yaeger-2022.2023.jar" beforeDir="false" />
     </list>
+=======
+    <list default="true" id="35dd1eb7-9c7a-41c8-a115-dbabc80d2410" name="Changes" comment="test 2.0" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +176,14 @@
       <workItem from="1679404359724" duration="25000" />
       <workItem from="1679473327961" duration="285000" />
       <workItem from="1679486442545" duration="10704000" />
+<<<<<<< Updated upstream
       <workItem from="1679579328425" duration="4500000" />
+=======
+      <workItem from="1679579328425" duration="10071000" />
+      <workItem from="1679663271249" duration="6146000" />
+      <workItem from="1679751381956" duration="5129000" />
+      <workItem from="1679838729447" duration="3097000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="testing">
       <created>1679060593486</created>
