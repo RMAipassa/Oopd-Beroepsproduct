@@ -3,8 +3,8 @@ package nl.desertgame.desert_game.map;
 import com.github.hanyaeger.api.scenes.TileMap;
 import nl.desertgame.desert_game.map.tiles.*;
 
-public class ChestRoom extends TileMap {
-    private static final int[][] ChestRoom = {
+public class MidMap extends TileMap {
+    private static final int[][] MiddleBossRoom = {
             {17,9,9,10,9,10,9,9,9,9,9,9,9,9,10,10,9,9,10,9,9,9,10,10,9,9,9,9,10,10,10,10,9,9,10,10,9,10,10,18},
             {15,4,3,4,1,2,3,4,1,2,1,2,3,4,3,4,1,2,1,2,1,2,3,4,3,4,1,2,1,2,3,4,1,2,3,4,1,2,3,12},
             {15,2,1,2,3,4,1,2,3,4,3,4,1,2,1,2,3,4,3,4,3,4,1,2,1,2,3,4,3,4,1,2,3,4,1,2,3,4,1,11},
@@ -31,7 +31,7 @@ public class ChestRoom extends TileMap {
         addEntity(2, FloorTile.class, FloorTile.getTextures()[1]); // top right floor tile
         addEntity(3, FloorTile.class, FloorTile.getTextures()[2]);// bottom left floor tile
         addEntity(4, FloorTile.class, FloorTile.getTextures()[3]);//bottom right floor tile
-        addEntity(7, EntryTile.class, ExitTile.getTextures()[2]);// Bottom door tile
+        addEntity(7, BottomDoor.class, ExitTile.getTextures()[2]);// Bottom door tile
         addEntity(9, SolidTile.class, SolidTile.getTextures()[4]); // Top wall  tile
         addEntity(10, SolidTile.class, SolidTile.getTextures()[5]); // top brick wall tile
         addEntity(11, SolidTile.class, SolidTile.getTextures()[6]);// right wall tile
@@ -52,6 +52,6 @@ public class ChestRoom extends TileMap {
 
     @Override
     public int[][] defineMap() {
-        return ChestRoom;
+        return MiddleBossRoom;
     }
 }

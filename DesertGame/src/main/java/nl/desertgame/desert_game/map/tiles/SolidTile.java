@@ -12,7 +12,7 @@ public class SolidTile extends SpriteEntity implements Collider {
             "sprites/SolidTiles/TopDoor.png",
             "sprites/SolidTiles/RightDoor.png",
             "sprites/SolidTiles/BottomDoor.png",
-            "sprites/LeftDoor.png",
+            "sprites/SolidTiles/LeftDoor.png",
             "sprites/SolidTiles/TopWall.png",
             "sprites/SolidTiles/TopBricks.png",
             "sprites/SolidTiles/RightWall.png",
@@ -31,6 +31,7 @@ public class SolidTile extends SpriteEntity implements Collider {
             "sprites/SolidTiles/KeyDoor.png",
             "sprites/SolidTiles/LeftKey.png",
             "sprites/SolidTiles/RightKey.png",
+            "sprites/SolidTiles/closedDoor.png"
     };
 
     /**

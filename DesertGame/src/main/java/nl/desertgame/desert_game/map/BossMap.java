@@ -5,7 +5,7 @@ import nl.desertgame.desert_game.map.tiles.FloorTile;
 import nl.desertgame.desert_game.map.tiles.Keydoor;
 import nl.desertgame.desert_game.map.tiles.SolidTile;
 
-public class BossRoom extends TileMap {
+public class BossMap extends TileMap {
 
 
     private static final int[][] BossMap = {

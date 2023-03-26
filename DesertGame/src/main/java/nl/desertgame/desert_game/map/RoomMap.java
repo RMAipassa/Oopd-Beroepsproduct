@@ -1,5 +1,6 @@
 package nl.desertgame.desert_game.map;
 
+import com.github.hanyaeger.api.entities.YaegerEntity;
 import com.github.hanyaeger.api.scenes.TileMap;
 import nl.desertgame.desert_game.map.tiles.*;
 
@@ -14,7 +15,7 @@ public class RoomMap extends TileMap {
             {16,2,1,2,3,4,1,2,3,4,3,4,1,2,1,2,3,4,3,4,3,4,1,2,1,2,3,4,3,4,1,2,3,4,1,2,3,4,1,11},
             {15,4,3,4,1,2,3,4,1,2,1,2,3,4,3,4,1,2,1,2,1,2,3,4,3,4,1,2,1,2,3,4,1,2,3,4,1,2,3,12},
             {15,2,1,2,3,4,1,2,3,4,3,4,1,2,1,2,3,4,3,4,3,4,1,2,1,2,3,4,3,4,1,2,3,4,1,2,3,4,1,11},
-            {8,4,3,4,1,2,3,4,1,2,1,2,3,4,3,4,1,2,1,2,1,2,3,4,3,4,1,2,1,2,3,4,1,2,3,4,1,2,3,12},
+            {28,4,3,4,1,2,3,4,1,2,1,2,3,4,3,4,1,2,1,2,1,2,3,4,3,4,1,2,1,2,3,4,1,2,3,4,1,2,3,12},
             {16,2,1,2,3,4,1,2,3,4,3,4,1,2,1,2,3,4,3,4,3,4,1,2,1,2,3,4,3,4,1,2,3,4,1,2,3,4,1,11},
             {15,4,3,4,1,2,3,4,1,2,1,2,3,4,3,4,1,2,1,2,1,2,3,4,3,4,1,2,1,2,3,4,1,2,3,4,1,2,3,12},
             {15,2,1,2,3,4,1,2,3,4,3,4,1,2,1,2,3,4,3,4,3,4,1,2,1,2,3,4,3,4,1,2,3,4,1,2,3,4,1,11},
@@ -31,7 +32,7 @@ public class RoomMap extends TileMap {
         addEntity(2, FloorTile.class, FloorTile.getTextures()[1]); // top right floor tile
         addEntity(3, FloorTile.class, FloorTile.getTextures()[2]);// bottom left floor tile
         addEntity(4, FloorTile.class, FloorTile.getTextures()[3]);//bottom right floor tile
-        addEntity(5, ExitTile.class, ExitTile.getTextures()[0]); // Top door tile
+        addEntity(5, TopDoor.class, ExitTile.getTextures()[0]); // Top door tile
         addEntity(7, ExitTile.class, ExitTile.getTextures()[2]);// Bottom door tile
         addEntity(8, EntryTile.class, EntryTile.getTextures()[3]);//Left door tile
         addEntity(9, SolidTile.class, SolidTile.getTextures()[4]); // Top wall  tile
@@ -50,6 +51,7 @@ public class RoomMap extends TileMap {
         addEntity(25, Keydoor.class, Keydoor.getTextures()[0]); // Key door
         addEntity(26, Keydoor.class, Keydoor.getTextures()[1]); //left key door
         addEntity(27, Keydoor.class, Keydoor.getTextures()[2]); // right key door
+        addEntity(28, SolidTile.class, SolidTile.getTextures()[22]); // closed door
     }
 
     @Override

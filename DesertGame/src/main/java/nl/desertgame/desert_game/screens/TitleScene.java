@@ -11,6 +11,7 @@ import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.buttons.DifficultySwitcherButton;
 import nl.desertgame.desert_game.buttons.SceneSwitcherButton;
 import nl.desertgame.desert_game.entities.Image;
+import nl.desertgame.desert_game.entities.Player;
 
 public class TitleScene extends StaticScene {
     private DesertGame desertGame;
@@ -30,6 +31,10 @@ public class TitleScene extends StaticScene {
         Image titleImage = new Image("sprites/title.png", new Coordinate2D(getWidth() / 2, 50));
         titleImage.setAnchorPoint(AnchorPoint.CENTER_CENTER);
         addEntity(titleImage);
+        setupButton();
+        resetVariables();
+    }
+    public void setupButton(){
         var startButton = new SceneSwitcherButton(new Coordinate2D(380,250),"Start Game",1,this.desertGame);
         startButton.setFill(Color.WHITE);
         startButton.setFont(Font.font("Roboto", FontWeight.BOLD, 45));
@@ -40,6 +45,11 @@ public class TitleScene extends StaticScene {
         difButton.setFill(Color.WHITE);
         difButton.setFont(Font.font("Roboto", FontWeight.BOLD, 40));
         addEntity(difButton);
+    }
+    public void resetVariables(){
+        Player.setTotalHealth(0);
+        Player.setHealth(0);
+        Player.setPotions(0);
     }
 
 }

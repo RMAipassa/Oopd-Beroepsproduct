@@ -1,13 +1,18 @@
 package nl.desertgame.desert_game.entities.Objects;
 
-import javafx.scene.Node;
-import nl.desertgame.desert_game.entities.Object;
+import com.github.hanyaeger.api.Coordinate2D;
+import com.github.hanyaeger.api.entities.impl.SpriteEntity;
 
-import java.util.Optional;
+public class Steen extends SpriteEntity implements Object {
+    protected Steen(Coordinate2D initialLocation, String resource) {
+        super(resource, initialLocation);
+    }
+    public String[] textures = {
+            "sprites/Objects/Boulder.png",
+            "sprites/Objects/Steen.png",
+    };
 
-public class Steen implements Object {
-    @Override
-    public Optional<? extends Node> getNode() {
-        return Optional.empty();
+    public  String[] getTextures(){
+        return textures;
     }
 }

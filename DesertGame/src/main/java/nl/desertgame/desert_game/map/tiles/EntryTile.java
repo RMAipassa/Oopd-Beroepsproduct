@@ -11,7 +11,7 @@ public class EntryTile extends SpriteEntity implements Collider {
             "sprites/SolidTiles/TopDoor.png",
             "sprites/SolidTiles/RightDoor.png",
             "sprites/SolidTiles/BottomDoor.png",
-            "sprites/LeftDoor.png",
+            "sprites/SolidTiles/LeftDoor.png",
             "sprites/SolidTiles/KeyDoor.png",
             "sprites/SolidTiles/LeftKey.png",
             "sprites/SolidTiles/RightKey.png",

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Oopd-Beroepsproduct" options="--add-exports hanyaeger/com.github.hanyaeger.core=nl.desertgame.desert_game --add-exports hanyaeger/com.github.hanyaeger.core.entities=nl.desertgame.desert_game" />
+    </option>
+  </component>
+</project>
