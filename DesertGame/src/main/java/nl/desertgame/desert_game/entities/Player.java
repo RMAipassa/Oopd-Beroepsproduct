@@ -144,6 +144,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     public void explicitUpdate(long l) {
         if (isColliding) {
         }
+        updateSceneHeartsAndPotions();
         isColliding = false;
     }
 
@@ -213,15 +214,18 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
 
     public void doDamage(int damage) {
         setHealth(-damage);
-        updateSceneHeartsAndPotions();
     }
     public void healPlayer() {
         if(getPotions() == 0){
+
             System.out.println("You don't have any potions anymore...");
+        } else if(health == 5){
+
+            System.out.println("max health");
         } else {
             setPotions(-1);
+            setHealth(1);
             System.out.println("You have " + potions + " left");
-            updateSceneHeartsAndPotions();
         }
     }
 
