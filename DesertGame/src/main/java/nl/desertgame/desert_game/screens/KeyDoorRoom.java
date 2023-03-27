@@ -11,6 +11,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.desertgame.desert_game.DesertGame;
+import nl.desertgame.desert_game.entities.Chest.PotionsChest;
 import nl.desertgame.desert_game.entities.Enemies.Bat;
 import nl.desertgame.desert_game.entities.Enemies.Crab;
 import nl.desertgame.desert_game.entities.Enemies.Enemy;
@@ -30,11 +31,10 @@ public class KeyDoorRoom extends DynamicScene implements TileMapContainer, Updat
     private static Text amountPotion;
     private int monstersdefeated = 0;
     private Enemy[] enemies = {
+            new Mummy(new Coordinate2D(200,200)),
             new Crab(new Coordinate2D(960,400)),
             new Bat(new Coordinate2D(780,300)),
-            new Mummy(new Coordinate2D(1100,100)),
-            new Mummy(new Coordinate2D(1000,300)),
-
+            new Bat(new Coordinate2D(1000,300)),
     };
     public KeyDoorRoom(DesertGame desertGame) {
         this.desertGame = desertGame;
@@ -51,6 +51,11 @@ public class KeyDoorRoom extends DynamicScene implements TileMapContainer, Updat
 
     @Override
     public void setupEntities() {
+        addEntity(enemies[0]);
+        addEntity(enemies[1]);
+        addEntity(enemies[3]);
+        addEntity(enemies[2]);
+        addEntity(new PotionsChest(new Coordinate2D(640,320)));
         player = new Player(desertGame ,new Coordinate2D(640, 60));
         addEntity(player);
         setupHearts();
@@ -100,6 +105,16 @@ public class KeyDoorRoom extends DynamicScene implements TileMapContainer, Updat
 
     @Override
     public void explicitUpdate(long l) {
-
+            for(int i = 0; i< enemies.length; i++) {
+            enemies[i].move(enemies[i].angleTo(player));
+                if(enemies[i].getHealth() <= 0){
+                    monstersdefeated++;
+                    enemies[i].notifyRemove();
+                }
+            }
+            if(monstersdefeated == enemies.length){
+                player.setCanOpenDoor();
+            }
     }
+
 }

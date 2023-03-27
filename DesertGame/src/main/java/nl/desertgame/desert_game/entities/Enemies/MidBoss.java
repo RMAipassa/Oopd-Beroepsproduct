@@ -31,7 +31,6 @@ public class MidBoss extends DynamicSpriteEntity implements Collider, Collided, 
     public double angleTo(Coordinate2D otherLocation) {
         return super.angleTo(otherLocation);
     }
-
     public void onCollision(Collider collidingObjects) {
         if (collidingObjects instanceof Player) {
             System.out.println("hit player");

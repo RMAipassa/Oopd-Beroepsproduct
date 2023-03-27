@@ -7,6 +7,7 @@ import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
+import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.entities.Objects.Object;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.entities.Weapons.Bullet;
@@ -14,14 +15,17 @@ import nl.desertgame.desert_game.entities.Weapons.Projectile;
 
 
 public class Boss extends DynamicSpriteEntity implements Collider, Collided, UpdateExposer {
+    private DesertGame desertGame;
     private static boolean isColliding = false;
     private static boolean withObject = false;
     private static boolean withMonster = false;
     private int health;
-    public Boss(Coordinate2D initialLocation) {
+    public Boss(DesertGame desertGame, Coordinate2D initialLocation) {
         super("sprites/Enemies/mummy boss.png", initialLocation, new Size(56, 104), 2, 2);
         setAnchorPoint(AnchorPoint.CENTER_CENTER);
         this.health = 100;
+        this.desertGame = desertGame;
+
     }
 
     public Coordinate2D getBossLocation() {
@@ -58,6 +62,10 @@ public class Boss extends DynamicSpriteEntity implements Collider, Collided, Upd
     public void explicitUpdate(long l) {
         if (isColliding) {
         }
+        if(getHealth() <=  0 ){
+            notifyRemove();
+            desertGame.setActiveScene(7);
+        }
         isColliding = false;
         withObject = false;
         withMonster = false;
@@ -77,9 +85,7 @@ public class Boss extends DynamicSpriteEntity implements Collider, Collided, Upd
             if (withObject) {
                 setMotion(0, direction);
             }
-            if (withMonster) {
-                setMotion(20, -direction);
-            } else {
+             else {
                 setMotion(-200, -direction);
             }
         } else {

@@ -52,10 +52,6 @@ public class Crab extends Enemy{
             }
             System.out.println(getHealth());
         }
-        else if(collidingObjects instanceof Mummy) {
-            isColliding = true;
-            withMonster = true;
-        }
     }
 
     private void doDamage(int i) {
@@ -85,13 +81,11 @@ public class Crab extends Enemy{
             if(withObject){
                 setMotion(0,direction);
             }
-            if(withMonster){
-                setMotion(20,-direction);
-            }else {
+            else {
                 setMotion(-200, -direction);
             }
         } else{
-            setMotion(2, direction);
+            setMotion(1.25, direction);
         }
     }
 }

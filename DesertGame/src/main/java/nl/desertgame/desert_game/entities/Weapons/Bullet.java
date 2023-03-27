@@ -3,7 +3,9 @@ package nl.desertgame.desert_game.entities.Weapons;
 import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Collider;
+import nl.desertgame.desert_game.entities.Enemies.Enemy;
 import nl.desertgame.desert_game.entities.Player;
+import nl.desertgame.desert_game.screens.EnemyChoiceRoom;
 
 public class Bullet extends Projectile {
     public Bullet(Coordinate2D initialLocation) {
@@ -26,7 +28,11 @@ public class Bullet extends Projectile {
     public void onCollision(Collider collider) {
         if(collider instanceof Player){
 
-        } else {
+        } else if(collider instanceof Enemy) {
+            System.out.println("hit enemy");
+            remove();
+        }else{
+
             remove();
         }
     }

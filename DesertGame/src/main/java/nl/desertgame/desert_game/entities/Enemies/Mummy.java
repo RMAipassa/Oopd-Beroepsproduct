@@ -5,7 +5,10 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.entities.Collider;
 import nl.desertgame.desert_game.entities.Objects.Object;
 import nl.desertgame.desert_game.entities.Player;
+import nl.desertgame.desert_game.entities.Weapons.Bullet;
 import nl.desertgame.desert_game.entities.Weapons.Projectile;
+import nl.desertgame.desert_game.map.tiles.SolidTile;
+import nl.desertgame.desert_game.screens.EnemyChoiceRoom;
 
 public class Mummy extends Enemy{
     private static boolean isColliding = false;
@@ -36,14 +39,16 @@ public class Mummy extends Enemy{
             System.out.println("hit box");
             isColliding = true;
 
-        }else if(collidingObjects instanceof Projectile){
+        }else if(collidingObjects instanceof SolidTile){
+            setMotion(0,0);
+            isColliding = true;
+
+        }else if(collidingObjects instanceof Enemy){
+
+        }else{
             doDamage(1);
             System.out.println(getHealth());
         }
-//        else if(collidingObjects instanceof Mummy) {
-//            isColliding = true;
-//            withMonster = true;
-//        }
     }
 
     private void doDamage(int i) {
@@ -69,16 +74,13 @@ public class Mummy extends Enemy{
     }
 
     public void move(double direction) {
-        if (isColliding){
-            if(withObject){
-                setMotion(0,direction);
+        if (isColliding) {
+            if (withObject) {
+                setMotion(0, direction);
+            } else {
+                setMotion(200, -direction);
             }
-            if(withMonster){
-                setMotion(20,-direction);
-            }else {
-                setMotion(-200, -direction);
-            }
-        } else{
+        }else{
             setMotion(2, direction);
         }
     }

@@ -36,7 +36,7 @@ public class EnemyChoiceRoom extends DynamicScene implements TileMapContainer, U
     private Enemy[] enemies = {
             new Crab(new Coordinate2D(960,400)),
             new Bat(new Coordinate2D(480,200)),
-            new Bat(new Coordinate2D(780,300))
+            new Mummy(new Coordinate2D(780,300))
     };
 
     public EnemyChoiceRoom(DesertGame desertGame) {
@@ -104,7 +104,7 @@ public class EnemyChoiceRoom extends DynamicScene implements TileMapContainer, U
 
     public void explicitUpdate(long l) {
         for(int i = 0; i<enemies.length; i++) {
-//            enemies[i].move(enemies[i].angleTo(player));
+            enemies[i].move(enemies[i].angleTo(player));
             if(enemies[i].getHealth() <= 0){
                 monstersdefeated++;
                 enemies[i].notifyRemove();

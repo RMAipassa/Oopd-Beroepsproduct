@@ -12,6 +12,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.entities.*;
+import nl.desertgame.desert_game.entities.Enemies.Bat;
 import nl.desertgame.desert_game.entities.Enemies.Enemy;
 import nl.desertgame.desert_game.entities.Enemies.Mummy;
 import nl.desertgame.desert_game.entities.Objects.Box;
@@ -29,7 +30,7 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
     private int monstersdefeated = 0;
 
     private Enemy[] enemies = {
-            new Mummy(new Coordinate2D(960,400)),
+            new Bat(new Coordinate2D(960,400)),
             new Mummy(new Coordinate2D(960,200))
     };
     public int amountHearts;
@@ -55,6 +56,13 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
     }
 
     public void setupPotions() {
+        if (desertGame.difficulty == 0) {
+            Player.setPotions(4);
+        } else if (desertGame.difficulty == 1) {
+            Player.setPotions(2);
+        } else {
+            Player.setPotions(0);
+        }
         Image potions = new Image("sprites/potion.png", new Coordinate2D(50, 50), new Size(32, 32));
         addEntity(potions);
         amountPotion = new Text(new Coordinate2D(80, 52), Player.getPotions() + "x");
@@ -102,7 +110,7 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
     @Override
     public void explicitUpdate(long l) {
         for(int i = 0; i< enemies.length; i++) {
-//            enemies[i].move(enemies[i].angleTo(player));
+            enemies[i].move(enemies[i].angleTo(player));
             if(enemies[i].getHealth() <= 0){
                 monstersdefeated++;
                 enemies[i].notifyRemove();

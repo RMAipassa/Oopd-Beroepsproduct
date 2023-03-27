@@ -10,6 +10,7 @@ import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.userinput.KeyListener;
 import javafx.scene.input.KeyCode;
 import nl.desertgame.desert_game.DesertGame;
+import nl.desertgame.desert_game.entities.Chest.PotionsChest;
 import nl.desertgame.desert_game.entities.Enemies.Boss;
 import nl.desertgame.desert_game.entities.Enemies.Enemy;
 import nl.desertgame.desert_game.entities.Enemies.MidBoss;
@@ -143,6 +144,9 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     public void explicitUpdate(long l) {
         if (isColliding) {
         }
+        if(getHealth() <= 0){
+//            desertGame.setActiveScene(6);
+        }
         updateSceneHeartsAndPotions();
         isColliding = false;
     }
@@ -174,11 +178,16 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
                 desertGame.setActiveScene(nextScene);
                 setScenes(+1);
                 canOpenDoor = false;
+            }else {
+                isColliding = true;
+                setMotion(0, 0);
             }
         } else if (collidingObjects instanceof EntryTile) {
             if(canOpenDoor) {
                 desertGame.setActiveScene(previousScene);
                 setScenes(-1);
+            }else {isColliding = true;
+                setMotion(0, 0);
             }
         } else if (collidingObjects instanceof Keydoor) {
             if(Player.hasKey) {
@@ -186,6 +195,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
                 setScenes(+1);
             } else {
             System.out.println("player has no key");
+            isColliding = true;
             setMotion(0, 0);
             }
         } else if (collidingObjects instanceof TopDoor) {
@@ -202,14 +212,11 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
             }
             setMotion(0, 0);
         } else if( collidingObjects instanceof Object){
-
+            isColliding = true;
             setMotion(0, 0);
         }else if( collidingObjects instanceof Enemy){
             isColliding = true;
             doDamage(1);
-
-
-
         }else if(collidingObjects instanceof Boss) {
             isColliding = true;
             doDamage(3);
@@ -218,6 +225,8 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
             doDamage(2);
         } else if(collidingObjects instanceof DoorKey){
             setHasKey();
+        }else if(collidingObjects instanceof PotionsChest){
+            setPotions(5);
         }
     }
 

@@ -84,7 +84,7 @@ public class Bat extends Enemy {
                 setMotion(-200, -direction);
             }
         } else{
-            setMotion(2, direction);
+            setMotion(2.75, direction);
         }
     }
 }

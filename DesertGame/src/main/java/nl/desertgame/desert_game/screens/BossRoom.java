@@ -31,7 +31,7 @@ public class BossRoom extends DynamicScene implements TileMapContainer, UpdateEx
     private static Player player;
     private static Heart[] hearts;
     private static Text amountPotion;
-    public static Boss EndBoss = new Boss(new Coordinate2D(640, 320));
+    public static Boss EndBoss;
 
     public BossRoom(DesertGame desertGame) {
         this.desertGame = desertGame;
@@ -48,7 +48,8 @@ public class BossRoom extends DynamicScene implements TileMapContainer, UpdateEx
 
     @Override
     public void setupEntities() {
-        addEntity(EndBoss);
+
+        addEntity(EndBoss = new Boss(desertGame ,new Coordinate2D(640, 320)));
         player = new Player(desertGame ,new Coordinate2D(1230, 320));
         addEntity(player);
         setupHearts();
