@@ -93,7 +93,6 @@ public class MiddleBoss extends DynamicScene implements TileMapContainer, Update
         }
         if(player.getHasKey()){
             doorKey.notifyRemove();
-            System.out.println("haskey");
         }
     }
     public static Coordinate2D getPlayerLocation(){

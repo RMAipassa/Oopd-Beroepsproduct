@@ -48,9 +48,6 @@ public class Boss extends DynamicSpriteEntity implements Collider, Collided, Upd
         } else if (collidingObjects instanceof Projectile) {
             doDamage(1);
             System.out.println(getHealth());
-        } else if (collidingObjects instanceof Mummy) {
-            isColliding = true;
-            withMonster = true;
         }
     }
 
@@ -68,7 +65,6 @@ public class Boss extends DynamicSpriteEntity implements Collider, Collided, Upd
         }
         isColliding = false;
         withObject = false;
-        withMonster = false;
     }
 
     public int getHealth() {

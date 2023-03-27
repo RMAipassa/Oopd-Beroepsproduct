@@ -109,25 +109,8 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
                     moveplayer(0);
 
                 }
-                case Z -> { //was used for testing
-                    System.out.println(nextScene);
-                    desertGame.setActiveScene(nextScene);
-                    setScenes(+1);
-                }
-                case UP -> { //was used for testing
-                    doDamage(1);
-                }
-                case X -> { //was used for testing
+                case X -> {
                     healPlayer();
-                }
-                case C -> {
-
-                    System.out.println(StartRoom.getPlayerLocation());
-                }
-                case O -> {
-                Player.setPotions(5);
-
-                    System.out.println(StartRoom.getPlayerLocation());
                 }
                 default -> setSpeed(0);
             }
@@ -143,9 +126,10 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     @Override
     public void explicitUpdate(long l) {
         if (isColliding) {
+            updateSceneHeartsAndPotions();
         }
         if(getHealth() <= 0){
-//            desertGame.setActiveScene(6);
+            desertGame.setActiveScene(6);
         }
         updateSceneHeartsAndPotions();
         isColliding = false;
@@ -161,9 +145,6 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
        previousScene += change;
        currentscene += change;
        nextScene += change;
-       System.out.println(currentscene);
-       System.out.println(previousScene);
-       System.out.println(nextScene);
     }
 
 
@@ -238,7 +219,7 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     public void doDamage(int damage) {
         int currenthealth = getHealth();
         if (currenthealth < damage) {
-            setHealth(-currenthealth); // should be kill player and to defeat-screen
+            setHealth(-currenthealth);
         } else {
             setHealth(-damage);
         }

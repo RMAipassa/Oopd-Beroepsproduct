@@ -113,7 +113,7 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
             enemies[i].move(enemies[i].angleTo(player));
             if(enemies[i].getHealth() <= 0){
                 monstersdefeated++;
-                enemies[i].notifyRemove();
+                enemies[i].remove();
             }
         }
         if(monstersdefeated == enemies.length){
