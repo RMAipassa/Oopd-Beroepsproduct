@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 import static nl.desertgame.desert_game.entities.Player.getTotalHealth;
 
-public class BossRoom extends DynamicScene implements TileMapContainer, UpdateExposer, MouseButtonPressedListener {
+public class BossRoom extends GameScreen {
 
     private DesertGame desertGame;
     private static Player player;

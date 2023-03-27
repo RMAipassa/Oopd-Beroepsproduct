@@ -26,7 +26,7 @@ import nl.desertgame.desert_game.map.RoomMap;
 import static nl.desertgame.desert_game.entities.Player.getTotalHealth;
 
 
-public class EnemyChoiceRoom extends DynamicScene implements TileMapContainer, UpdateExposer, MouseButtonPressedListener {
+public class EnemyChoiceRoom extends GameScreen {
 
     private DesertGame desertGame;
     private static Player player;
