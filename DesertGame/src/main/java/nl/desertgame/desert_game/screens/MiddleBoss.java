@@ -2,25 +2,30 @@ package nl.desertgame.desert_game.screens;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
+import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
+import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.desertgame.desert_game.DesertGame;
-import nl.desertgame.desert_game.entities.Heart;
-import nl.desertgame.desert_game.entities.Image;
-import nl.desertgame.desert_game.entities.Player;
-import nl.desertgame.desert_game.entities.Text;
+import nl.desertgame.desert_game.entities.*;
+import nl.desertgame.desert_game.entities.Enemies.MidBoss;
+import nl.desertgame.desert_game.entities.Weapons.Bullet;
+import nl.desertgame.desert_game.entities.Weapons.Projectile;
 import nl.desertgame.desert_game.map.MidMap;
 
-import java.util.ArrayList;
-
-public class MiddleBoss extends DynamicScene implements TileMapContainer {
+public class MiddleBoss extends DynamicScene implements TileMapContainer, UpdateExposer, MouseButtonPressedListener {
     private DesertGame desertGame;
     private static Player player;
     private static Heart[] hearts;
     private static Text amountPotion;
+    private boolean keyhasspawned;
+
+    private MidBoss midBoss = new MidBoss(new Coordinate2D(640, 320));
+    private final DoorKey doorKey = new DoorKey(new Coordinate2D(640, 320));
     public MiddleBoss(DesertGame desertGame) {
         this.desertGame = desertGame;
     }
@@ -36,6 +41,7 @@ public class MiddleBoss extends DynamicScene implements TileMapContainer {
 
     @Override
     public void setupEntities() {
+        addEntity(midBoss);
         player = new Player(desertGame ,new Coordinate2D(620, 585));
         addEntity(player);
         setupHearts();
@@ -72,5 +78,31 @@ public class MiddleBoss extends DynamicScene implements TileMapContainer {
                 hearts[i].setCurrentFrameIndex(1); // heart is empty
             }
         }
+    }
+    @Override
+    public void explicitUpdate(long l) {
+
+       midBoss.move(midBoss.angleTo(player));
+        if(midBoss.getHealth() <= 0){
+            midBoss.notifyRemove();
+            player.setCanOpenDoor();
+            if(!keyhasspawned) {
+                addEntity(doorKey);
+                keyhasspawned = true;
+            }
+        }
+        if(player.getHasKey()){
+            doorKey.notifyRemove();
+            System.out.println("haskey");
+        }
+    }
+    public static Coordinate2D getPlayerLocation(){
+        return player.getAnchorLocation();
+    }
+    @Override
+    public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
+        Projectile bullet = new Bullet(getPlayerLocation());
+        addEntity(bullet);
+        bullet.move(player.angleTo(coordinate2D));
     }
 }

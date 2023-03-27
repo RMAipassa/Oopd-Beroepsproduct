@@ -5,7 +5,7 @@ import nl.desertgame.desert_game.map.tiles.FloorTile;
 import nl.desertgame.desert_game.map.tiles.Keydoor;
 import nl.desertgame.desert_game.map.tiles.SolidTile;
 
-public class FakeChestMap extends TileMap {
+public class KeyDoorRoom extends TileMap {
 
     private static final int[][] FakeChestMap = {
             {17,9,9,10,9,10,9,9,9,9,9,9,9,9,10,10,9,9,10,5,9,9,10,10,9,9,9,9,10,10,10,10,9,9,10,10,9,10,10,18},

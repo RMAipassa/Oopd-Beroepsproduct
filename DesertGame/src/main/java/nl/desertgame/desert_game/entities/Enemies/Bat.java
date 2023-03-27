@@ -11,19 +11,20 @@ import nl.desertgame.desert_game.entities.Objects.Object;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.entities.Weapons.Projectile;
 
-
-public class MidBoss extends DynamicSpriteEntity implements Collider, Collided, UpdateExposer {
+public class Bat extends Enemy {
     private static boolean isColliding = false;
     private static boolean withObject = false;
     private static boolean withMonster = false;
+
     private int health;
-    public MidBoss(Coordinate2D initialLocation) {
-        super("sprites/Enemies/Skeleton_Mage_dangerous.png", initialLocation, new Size(56, 104), 2, 2);
+
+    public Bat(Coordinate2D initialLocation) {
+        super("sprites/Enemies/Bat.png", initialLocation);
         setAnchorPoint(AnchorPoint.CENTER_CENTER);
-        this.health = 50;
+        this.health = 7;
     }
 
-    public Coordinate2D getBossLocation() {
+    public  Coordinate2D getMonsterLocation(){
         return getAnchorLocation();
     }
 
@@ -36,14 +37,15 @@ public class MidBoss extends DynamicSpriteEntity implements Collider, Collided, 
         if (collidingObjects instanceof Player) {
             System.out.println("hit player");
             isColliding = true;
-        } else if (collidingObjects instanceof Object) {
+        } else if(collidingObjects instanceof Object){
             System.out.println("hit box");
             isColliding = true;
 
-        } else if (collidingObjects instanceof Projectile) {
+        }else if(collidingObjects instanceof Projectile){
             doDamage(1);
             System.out.println(getHealth());
-        } else if (collidingObjects instanceof Mummy) {
+        }
+        else if(collidingObjects instanceof Mummy) {
             isColliding = true;
             withMonster = true;
         }
@@ -62,7 +64,7 @@ public class MidBoss extends DynamicSpriteEntity implements Collider, Collided, 
         withMonster = false;
     }
 
-    public int getHealth() {
+    public int getHealth(){
         return this.health;
     }
 
@@ -72,16 +74,16 @@ public class MidBoss extends DynamicSpriteEntity implements Collider, Collided, 
     }
 
     public void move(double direction) {
-        if (isColliding) {
-            if (withObject) {
-                setMotion(0, direction);
+        if (isColliding){
+            if(withObject){
+                setMotion(0,direction);
             }
-            if (withMonster) {
-                setMotion(20, -direction);
-            } else {
+            if(withMonster){
+                setMotion(20,-direction);
+            }else {
                 setMotion(-200, -direction);
             }
-        } else {
+        } else{
             setMotion(2, direction);
         }
     }

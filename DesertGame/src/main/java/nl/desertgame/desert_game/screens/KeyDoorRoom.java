@@ -2,32 +2,46 @@ package nl.desertgame.desert_game.screens;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
+import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
+import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.desertgame.desert_game.DesertGame;
+import nl.desertgame.desert_game.entities.Enemies.Bat;
+import nl.desertgame.desert_game.entities.Enemies.Crab;
+import nl.desertgame.desert_game.entities.Enemies.Enemy;
+import nl.desertgame.desert_game.entities.Enemies.Mummy;
 import nl.desertgame.desert_game.entities.Heart;
 import nl.desertgame.desert_game.entities.Image;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.entities.Text;
-import nl.desertgame.desert_game.map.FakeChestMap;
+import nl.desertgame.desert_game.entities.Weapons.Bullet;
+import nl.desertgame.desert_game.entities.Weapons.Projectile;
 
-import java.util.ArrayList;
-
-public class FakeChestRoom extends DynamicScene implements TileMapContainer {
+public class KeyDoorRoom extends DynamicScene implements TileMapContainer, UpdateExposer, MouseButtonPressedListener {
 
     private DesertGame desertGame;
     private static Player player;
     private static Heart[] hearts;
     private static Text amountPotion;
-    public FakeChestRoom(DesertGame desertGame) {
+    private int monstersdefeated = 0;
+    private Enemy[] enemies = {
+            new Crab(new Coordinate2D(960,400)),
+            new Bat(new Coordinate2D(780,300)),
+            new Mummy(new Coordinate2D(1100,100)),
+            new Mummy(new Coordinate2D(1000,300)),
+
+    };
+    public KeyDoorRoom(DesertGame desertGame) {
         this.desertGame = desertGame;
     }
     @Override
     public void setupTileMaps() {
-        addTileMap(new FakeChestMap());
+        addTileMap(new nl.desertgame.desert_game.map.KeyDoorRoom());
     }
 
     @Override
@@ -73,5 +87,19 @@ public class FakeChestRoom extends DynamicScene implements TileMapContainer {
                 hearts[i].setCurrentFrameIndex(1); // heart is empty
             }
         }
+    }
+    public static Coordinate2D getPlayerLocation(){
+        return player.getAnchorLocation();
+    }
+    @Override
+    public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
+        Projectile bullet = new Bullet(getPlayerLocation());
+        addEntity(bullet);
+        bullet.move(player.angleTo(coordinate2D));
+    }
+
+    @Override
+    public void explicitUpdate(long l) {
+
     }
 }

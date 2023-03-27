@@ -6,20 +6,18 @@ import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.entities.Collided;
 import com.github.hanyaeger.api.entities.Collider;
-import com.github.hanyaeger.api.entities.Direction;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.userinput.KeyListener;
-import javafx.scene.effect.ColorInput;
 import javafx.scene.input.KeyCode;
 import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.entities.Enemies.Boss;
 import nl.desertgame.desert_game.entities.Enemies.Enemy;
 import nl.desertgame.desert_game.entities.Enemies.MidBoss;
+import nl.desertgame.desert_game.entities.Objects.Object;
 import nl.desertgame.desert_game.map.tiles.*;
 import nl.desertgame.desert_game.screens.*;
 import nl.desertgame.desert_game.screens.StartRoom;
 
-import java.util.List;
 import java.util.Set;
 
 public class Player extends DynamicSpriteEntity implements KeyListener, Collided, Collider, UpdateExposer {
@@ -36,7 +34,8 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     boolean isColliding = false;
     static int direction;
 
-    public static boolean hasKey = true;
+    public static boolean hasKey;
+    private static boolean canOpenDoor;
 
 
     public Player(DesertGame desertgame,Coordinate2D initialLocation) {
@@ -171,39 +170,54 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
             isColliding = true;
             setMotion(0, 0);
         } else if (collidingObjects instanceof ExitTile) {
-            desertGame.setActiveScene(nextScene);
-            setScenes(+1);
+            if(canOpenDoor) {
+                desertGame.setActiveScene(nextScene);
+                setScenes(+1);
+                canOpenDoor = false;
+            }
         } else if (collidingObjects instanceof EntryTile) {
-            desertGame.setActiveScene(previousScene);
-            setScenes(-1);
+            if(canOpenDoor) {
+                desertGame.setActiveScene(previousScene);
+                setScenes(-1);
+            }
         } else if (collidingObjects instanceof Keydoor) {
             if(Player.hasKey) {
                 desertGame.setActiveScene(nextScene);
                 setScenes(+1);
             } else {
             System.out.println("player has no key");
+            setMotion(0, 0);
             }
         } else if (collidingObjects instanceof TopDoor) {
-            desertGame.setActiveScene(5);
-            currentscene = 5;
+            if(canOpenDoor) {
+                desertGame.setActiveScene(5);
+                currentscene = 5;
+                canOpenDoor = false;
+            }
+            setMotion(0, 0);
         } else if (collidingObjects instanceof BottomDoor) {
+            if(canOpenDoor) {
             desertGame.setActiveScene(2);
             currentscene = 2;
-
+            }
+            setMotion(0, 0);
         } else if( collidingObjects instanceof Object){
 
             setMotion(0, 0);
         }else if( collidingObjects instanceof Enemy){
             isColliding = true;
-            if(collidingObjects instanceof Boss) {
-                doDamage(3);
-            } else if(collidingObjects instanceof MidBoss){
-                doDamage(2);
-            } else {
-                doDamage(1);
-            }
+            doDamage(1);
 
 
+
+        }else if(collidingObjects instanceof Boss) {
+            isColliding = true;
+            doDamage(3);
+        } else if(collidingObjects instanceof MidBoss){
+            isColliding = true;
+            doDamage(2);
+        } else if(collidingObjects instanceof DoorKey){
+            setHasKey();
         }
     }
 
@@ -245,8 +259,8 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
                 EnemyChoiceRoom.updatePotions();
             }
             case 3 -> {
-                FakeChestRoom.updateHearts();
-                FakeChestRoom.updatePotions();
+                KeyDoorRoom.updateHearts();
+                KeyDoorRoom.updatePotions();
             }
             case 4 -> {
                 BossRoom.updateHearts();
@@ -278,5 +292,15 @@ public class Player extends DynamicSpriteEntity implements KeyListener, Collided
     }
     public static int getPotions() {
         return potions;
+    }
+
+    public void setCanOpenDoor(){
+        canOpenDoor = true;
+    }
+    public void  setHasKey(){
+        hasKey = true;
+    }
+    public boolean getHasKey(){
+        return hasKey;
     }
 }

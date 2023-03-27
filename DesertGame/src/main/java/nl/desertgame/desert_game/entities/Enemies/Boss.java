@@ -13,17 +13,18 @@ import nl.desertgame.desert_game.entities.Weapons.Bullet;
 import nl.desertgame.desert_game.entities.Weapons.Projectile;
 
 
-public class Boss extends DynamicSpriteEntity implements Enemy, Collided, UpdateExposer {
+public class Boss extends DynamicSpriteEntity implements Collider, Collided, UpdateExposer {
     private static boolean isColliding = false;
-    private static boolean withObject = true;
-    private static Coordinate2D init;
+    private static boolean withObject = false;
+    private static boolean withMonster = false;
+    private int health;
     public Boss(Coordinate2D initialLocation) {
-        super("sprites/Enemies/mummy boss.png", initialLocation, new Size(28,52),2,2);
+        super("sprites/Enemies/mummy boss.png", initialLocation, new Size(56, 104), 2, 2);
         setAnchorPoint(AnchorPoint.CENTER_CENTER);
-        init = initialLocation;
+        this.health = 100;
     }
 
-    public  Coordinate2D getBossLocation(){
+    public Coordinate2D getBossLocation() {
         return getAnchorLocation();
     }
 
@@ -36,33 +37,52 @@ public class Boss extends DynamicSpriteEntity implements Enemy, Collided, Update
         if (collidingObjects instanceof Player) {
             System.out.println("hit player");
             isColliding = true;
-        } else if(collidingObjects instanceof Object){
+        } else if (collidingObjects instanceof Object) {
             System.out.println("hit box");
-            withObject = true;
-            setMotion(0,0);
-        }else if(collidingObjects instanceof Projectile){
-            System.out.println("Boss takes damage");
+            isColliding = true;
+
+        } else if (collidingObjects instanceof Projectile) {
+            doDamage(1);
+            System.out.println(getHealth());
+        } else if (collidingObjects instanceof Mummy) {
+            isColliding = true;
+            withMonster = true;
         }
     }
+
+    private void doDamage(int i) {
+        this.health = health - i;
+    }
+
     @Override
     public void explicitUpdate(long l) {
         if (isColliding) {
         }
         isColliding = false;
         withObject = false;
+        withMonster = false;
     }
 
+    public int getHealth() {
+        return this.health;
+    }
 
+    @Override
+    public void notifyRemove() {
+        super.notifyRemove();
+    }
 
-
-
-    public void moveboss(double direction) {
-        if (isColliding){
-            if(withObject){
-                setMotion(0,direction);
+    public void move(double direction) {
+        if (isColliding) {
+            if (withObject) {
+                setMotion(0, direction);
             }
-            setMotion(-200, -direction);
-        } else{
+            if (withMonster) {
+                setMotion(20, -direction);
+            } else {
+                setMotion(-200, -direction);
+            }
+        } else {
             setMotion(2, direction);
         }
     }

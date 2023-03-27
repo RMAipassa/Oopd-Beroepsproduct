@@ -1,10 +1,8 @@
 package nl.desertgame.desert_game.screens;
 
-import com.github.hanyaeger.api.AnchorPoint;
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
 import com.github.hanyaeger.api.UpdateExposer;
-import com.github.hanyaeger.api.entities.Collider;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
 import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
@@ -14,11 +12,12 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.desertgame.desert_game.DesertGame;
 import nl.desertgame.desert_game.entities.*;
-import nl.desertgame.desert_game.entities.Enemies.Boss;
+import nl.desertgame.desert_game.entities.Enemies.Enemy;
+import nl.desertgame.desert_game.entities.Enemies.Mummy;
 import nl.desertgame.desert_game.entities.Objects.Box;
+import nl.desertgame.desert_game.entities.Weapons.Projectile;
 import nl.desertgame.desert_game.map.StartMap;
 import nl.desertgame.desert_game.entities.Weapons.Bullet;
-import java.util.ArrayList;
 
 
 public class StartRoom extends DynamicScene implements TileMapContainer, UpdateExposer, MouseButtonPressedListener {
@@ -27,7 +26,12 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
     private static Player player;
     private static Heart[] hearts;
 
-    public static Boss EndBoss = new Boss(new Coordinate2D(640, 320));
+    private int monstersdefeated = 0;
+
+    private Enemy[] enemies = {
+            new Mummy(new Coordinate2D(960,400)),
+            new Mummy(new Coordinate2D(960,200))
+    };
     public int amountHearts;
 
     public StartRoom(DesertGame desertGame) {
@@ -41,7 +45,8 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
 
     @Override
     public void setupEntities() {
-        addEntity(EndBoss);
+        addEntity(enemies[0]);
+        addEntity(enemies[1]);
         addEntity(new Box(new Coordinate2D(340,550)));
         player = new Player(desertGame ,new Coordinate2D(50, 320));
         addEntity(player);
@@ -92,27 +97,33 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
 
 
 
-    public static Coordinate2D getPlayerLocation(){
-        return player.getAnchorLocation();
-    }
-    public  Coordinate2D getBossLocation(){
-        return EndBoss.getAnchorLocation();
-    }
+
 
     @Override
     public void explicitUpdate(long l) {
-        EndBoss.moveboss(EndBoss.angleTo(player));
+        for(int i = 0; i< enemies.length; i++) {
+//            enemies[i].move(enemies[i].angleTo(player));
+            if(enemies[i].getHealth() <= 0){
+                monstersdefeated++;
+                enemies[i].notifyRemove();
+            }
+        }
+        if(monstersdefeated == enemies.length){
+            player.setCanOpenDoor();
+        }
     }
     @Override
     public void setupTileMaps() {
         addTileMap(new StartMap());
     }
-
+    public static Coordinate2D getPlayerLocation(){
+        return player.getAnchorLocation();
+    }
     @Override
     public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
-        Bullet bullet = new Bullet(getPlayerLocation());
-       addEntity(bullet);
-       bullet.moveBullet(player.angleTo(coordinate2D));
+        Projectile bullet = new Bullet(getPlayerLocation());
+        addEntity(bullet);
+        bullet.move(player.angleTo(coordinate2D));
     }
 }
 

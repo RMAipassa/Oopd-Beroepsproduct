@@ -2,28 +2,36 @@ package nl.desertgame.desert_game.screens;
 
 import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.Size;
+import com.github.hanyaeger.api.UpdateExposer;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.api.scenes.TileMapContainer;
+import com.github.hanyaeger.api.userinput.MouseButtonPressedListener;
+import javafx.scene.input.MouseButton;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import nl.desertgame.desert_game.DesertGame;
+import nl.desertgame.desert_game.entities.Enemies.Boss;
+import nl.desertgame.desert_game.entities.Enemies.Enemy;
 import nl.desertgame.desert_game.entities.Heart;
 import nl.desertgame.desert_game.entities.Image;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.entities.Text;
+import nl.desertgame.desert_game.entities.Weapons.Bullet;
+import nl.desertgame.desert_game.entities.Weapons.Projectile;
 import nl.desertgame.desert_game.map.BossMap;
 
 import java.util.ArrayList;
 
 import static nl.desertgame.desert_game.entities.Player.getTotalHealth;
 
-public class BossRoom extends DynamicScene implements TileMapContainer {
+public class BossRoom extends DynamicScene implements TileMapContainer, UpdateExposer, MouseButtonPressedListener {
 
     private DesertGame desertGame;
     private static Player player;
     private static Heart[] hearts;
     private static Text amountPotion;
+    public static Boss EndBoss = new Boss(new Coordinate2D(640, 320));
 
     public BossRoom(DesertGame desertGame) {
         this.desertGame = desertGame;
@@ -40,6 +48,7 @@ public class BossRoom extends DynamicScene implements TileMapContainer {
 
     @Override
     public void setupEntities() {
+        addEntity(EndBoss);
         player = new Player(desertGame ,new Coordinate2D(1230, 320));
         addEntity(player);
         setupHearts();
@@ -74,5 +83,23 @@ public class BossRoom extends DynamicScene implements TileMapContainer {
                 hearts[i].setCurrentFrameIndex(1); // heart is empty
             }
         }
+    }
+    public  Coordinate2D getBossLocation(){
+        return EndBoss.getAnchorLocation();
+    }
+
+    @Override
+    public void explicitUpdate(long l) {
+        EndBoss.move(EndBoss.angleTo(player));
+    }
+
+    public static Coordinate2D getPlayerLocation(){
+        return player.getAnchorLocation();
+    }
+    @Override
+    public void onMouseButtonPressed(MouseButton mouseButton, Coordinate2D coordinate2D) {
+        Projectile bullet = new Bullet(getPlayerLocation());
+        addEntity(bullet);
+        bullet.move(player.angleTo(coordinate2D));
     }
 }
