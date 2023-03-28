@@ -18,6 +18,9 @@ import nl.desertgame.desert_game.entities.Enemies.Enemy;
 import nl.desertgame.desert_game.entities.Enemies.Mummy;
 import nl.desertgame.desert_game.entities.Heart;
 import nl.desertgame.desert_game.entities.Image;
+import nl.desertgame.desert_game.entities.Objects.Barrel;
+import nl.desertgame.desert_game.entities.Objects.Box;
+import nl.desertgame.desert_game.entities.Objects.Stone;
 import nl.desertgame.desert_game.entities.Player;
 import nl.desertgame.desert_game.entities.Text;
 import nl.desertgame.desert_game.entities.Weapons.Bullet;
@@ -51,6 +54,12 @@ public class KeyDoorRoom extends DynamicScene implements TileMapContainer, Updat
 
     @Override
     public void setupEntities() {
+        addEntity(new Box(new Coordinate2D(800,300)));
+        addEntity(new Barrel(new Coordinate2D(480,190)));
+        addEntity(new Stone(new Coordinate2D(400,500)));
+        addEntity(new Box(new Coordinate2D(200,370)));
+        addEntity(new Barrel(new Coordinate2D(1050,500)));
+        addEntity(new Stone(new Coordinate2D(1150,370)));
         addEntity(enemies[0]);
         addEntity(enemies[1]);
         addEntity(enemies[3]);

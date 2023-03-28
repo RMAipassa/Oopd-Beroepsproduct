@@ -15,7 +15,9 @@ import nl.desertgame.desert_game.entities.*;
 import nl.desertgame.desert_game.entities.Enemies.Bat;
 import nl.desertgame.desert_game.entities.Enemies.Enemy;
 import nl.desertgame.desert_game.entities.Enemies.Mummy;
+import nl.desertgame.desert_game.entities.Objects.Barrel;
 import nl.desertgame.desert_game.entities.Objects.Box;
+import nl.desertgame.desert_game.entities.Objects.Stone;
 import nl.desertgame.desert_game.entities.Weapons.Projectile;
 import nl.desertgame.desert_game.map.StartMap;
 import nl.desertgame.desert_game.entities.Weapons.Bullet;
@@ -48,7 +50,12 @@ public class StartRoom extends DynamicScene implements TileMapContainer, UpdateE
     public void setupEntities() {
         addEntity(enemies[0]);
         addEntity(enemies[1]);
-        addEntity(new Box(new Coordinate2D(340,550)));
+        addEntity(new Box(new Coordinate2D(800,300)));
+        addEntity(new Barrel(new Coordinate2D(480,190)));
+        addEntity(new Stone(new Coordinate2D(400,500)));
+        addEntity(new Stone(new Coordinate2D(200,370)));
+        addEntity(new Barrel(new Coordinate2D(1050,500)));
+        addEntity(new Stone(new Coordinate2D(1150,370)));
         player = new Player(desertGame ,new Coordinate2D(50, 320));
         addEntity(player);
         setupPotions();
