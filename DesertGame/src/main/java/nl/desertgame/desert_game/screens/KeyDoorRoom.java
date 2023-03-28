@@ -26,7 +26,7 @@ import nl.desertgame.desert_game.entities.Text;
 import nl.desertgame.desert_game.entities.Weapons.Bullet;
 import nl.desertgame.desert_game.entities.Weapons.Projectile;
 
-public class KeyDoorRoom extends DynamicScene implements TileMapContainer, UpdateExposer, MouseButtonPressedListener {
+public class KeyDoorRoom extends GameScreen {
 
     private DesertGame desertGame;
     private static Player player;

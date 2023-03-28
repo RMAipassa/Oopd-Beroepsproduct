@@ -23,7 +23,7 @@ import nl.desertgame.desert_game.map.StartMap;
 import nl.desertgame.desert_game.entities.Weapons.Bullet;
 
 
-public class StartRoom extends DynamicScene implements TileMapContainer, UpdateExposer, MouseButtonPressedListener {
+public class StartRoom extends GameScreen {
     private DesertGame desertGame;
     private static Text amountPotion;
     private static Player player;

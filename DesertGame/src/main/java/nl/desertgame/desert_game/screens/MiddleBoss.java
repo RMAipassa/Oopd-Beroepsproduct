@@ -17,7 +17,7 @@ import nl.desertgame.desert_game.entities.Weapons.Bullet;
 import nl.desertgame.desert_game.entities.Weapons.Projectile;
 import nl.desertgame.desert_game.map.MidMap;
 
-public class MiddleBoss extends DynamicScene implements TileMapContainer, UpdateExposer, MouseButtonPressedListener {
+public class MiddleBoss extends GameScreen {
     private DesertGame desertGame;
     private static Player player;
     private static Heart[] hearts;
